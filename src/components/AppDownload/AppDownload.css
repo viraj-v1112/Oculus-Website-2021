@@ -6,6 +6,30 @@
   font-size: 1.5rem;
 }
 
+.app-logo {
+  background-image: url('../../assets/images/Official\ App\ Title.png');
+  margin-top: 10rem;
+  background-repeat: no-repeat;
+  height: 5rem;
+  width: 14rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-image {
+  background-image: url('../../assets/images/MobileApp1-removebg-preview.png');
+  /* margin-top: 3.5rem; */
+  background-repeat: no-repeat;
+  height: 25rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .button-center {
   margin-left: calc(22.5%);
   margin-right: calc(22.5%);
