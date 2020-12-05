@@ -1,199 +1,195 @@
 body {
-  cursor: url('../../assets/images/favicon.png'),
-    url('../../assets/images/favicon.cur'), default;
+	cursor: url('../../assets/images/favicon.png'), url('../../assets/images/favicon.cur'), default;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0.6rem 0.6rem 0.6rem 0rem;
+	list-style-type: none;
+	padding: 0.6rem 0.6rem 0.6rem 0rem;
 }
 
 ul li {
-  padding: 0.6rem 0.6rem 0.6rem 0rem;
+	padding: 0.6rem 0.6rem 0.6rem 0rem;
 }
 
 ul#social li {
-  display: inline;
+	display: inline;
 }
 
 .back {
-  padding: 2rem;
-  background-image: linear-gradient(
-    to right,
-    #ed00cc,
-    #3f2669,
-    #3700af,
-    #00cdef
-  );
+	padding: 2rem;
+	background-image: linear-gradient(to right, #ed00cc, #3f2669, #3700af, #00cdef);
 }
-
 #logo {
-  background-image: url('../../assets/images/OculusLogoIconWhite2.png');
-  margin-top: 3.5rem;
-  background-repeat: no-repeat;
-  height: 4rem;
-  width: 14rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+	background-image: url('../../assets/images/OculusLogoIconWhite2.png');
+	margin-top: 3.5rem;
 
+	background-repeat: no-repeat;
+	height: 4rem;
+	width: 14rem;
+	margin-left: auto;
+	margin-right: auto;
+}
 .college-name-text {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
 }
-
 .college-add-text {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.8rem;
-  text-align: center;
-  color: #ffffff;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #ffffff;
 }
-
 .col-2-text {
-  font-family: 'Baloo Tamma 2';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  color: #ffffff;
-}
+	font-family: 'Baloo Tamma 2';
+	font-style: normal;
+	font-weight: bold;
 
+	font-size: 1.5rem;
+	text-align: center;
+	color: #ffffff;
+}
 .col-3-head {
-  font-family: 'Baloo Tamma 2';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 2rem;
-  text-align: center;
-  color: #ffffff;
+	font-family: 'Baloo Tamma 2';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 2rem;
+	text-align: center;
+	color: #ffffff;
 }
-
 .col-3-sub {
-  font-family: 'Baloo Tamma 2';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  color: #ffffff;
-}
-/* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px) {
-  a {
-    margin-left: 0.5rem;
-  }
-  .social-div {
-    margin-left: calc(15%);
-    margin-right: calc(15%);
-  }
-  .icon-style {
-    font-size: 1.25rem;
-    color: #fff;
-  }
-  .college-name-text {
-    font-size: 0.7rem;
-  }
-  .college-add-text {
-    font-size: 0.6rem;
-  }
-  .col-2-text {
-    font-size: 1.1rem;
-  }
-  .col-3-head {
-    font-size: 1.25rem;
-  }
-  .col-3-sub {
-    font-size: 1rem;
-  }
+	font-family: 'Baloo Tamma 2';
+	font-style: normal;
+	font-weight: bold;
+
+	font-size: 1.5rem;
+	text-align: center;
+	color: #ffffff;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-width: 400px) {
-  a {
-    margin-left: 0.65rem;
-  }
-  .social-div {
-    margin-left: calc(12.5%);
-    margin-right: calc(12.5%);
-  }
-  .icon-style {
-    font-size: 1.7rem;
-    color: #fff;
-  }
-  .college-name-text {
-    font-size: 0.7rem;
-  }
-  .college-add-text {
-    font-size: 0.6rem;
-  }
-  .col-2-text {
-    font-size: 1.1rem;
-  }
-  .col-3-head {
-    font-size: 1.25rem;
-  }
-  .col-3-sub {
-    font-size: 1rem;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  a {
-    margin-left: 0.75rem;
-  }
-  .social-div {
-    margin-left: 1.6rem;
-  }
-  .icon-style {
-    font-size: 1.75rem;
-    color: #fff;
-  }
-  .college-name-text {
-    font-size: 0.75rem;
-  }
-  .college-add-text {
-    font-size: 0.7rem;
-  }
-  .col-2-text {
-    font-size: 1.25rem;
-  }
-  .col-3-head {
-    font-size: 1.5rem;
-  }
-  .col-3-sub {
-    font-size: 1.25rem;
-  }
+.icon-style:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  a {
-    margin-left: 0.75rem;
-  }
-  .social-div {
-    margin-left: 3rem;
-  }
-  .icon-style {
-    font-size: 2rem;
-    color: #fff;
-  }
-  .college-name-text {
-    font-size: 0.9rem;
-  }
-  .college-add-text {
-    font-size: 0.8rem;
-  }
-  .col-2-text {
-    font-size: 1.5rem;
-  }
-  .col-3-head {
-    font-size: 2rem;
-  }
-  .col-3-sub {
-    font-size: 1.5rem;
-  }
+
+.social-div {
+	text-align: center;
+}
+.social-div a {
+	margin-left: 0.75rem;
+}
+.icon-style {
+	font-size: 1.5rem;
+	color: #fff;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+.college-name-text {
+	font-size: 0.9rem;
+}
+.college-add-text {
+	font-size: 0.8rem;
+}
+.col-2-text {
+	font-size: 1.5rem;
+}
+.col-3-head {
+	font-size: 2rem;
+}
+.col-3-sub {
+	font-size: 1.5rem;
+}
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+	.social-div a {
+		margin-left: 0.5rem;
+	}
+	/* .social-div {
+		margin-left: calc(15%);
+		margin-right: calc(15%);
+	} */
+	.icon-style {
+		font-size: 1.25rem;
+		color: #fff;
+	}
+	.college-name-text {
+		font-size: 0.7rem;
+	}
+	.college-add-text {
+		font-size: 0.6rem;
+	}
+	.col-2-text {
+		font-size: 1.1rem;
+	}
+	.col-3-head {
+		font-size: 1.25rem;
+	}
+	.col-3-sub {
+		font-size: 1rem;
+	}
+}
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 400px) {
+	.social-div a {
+		margin-left: 0.65rem;
+	}
+	/* .social-div {
+		margin-left: calc(12.5%);
+		margin-right: calc(12.5%);
+	} */
+	.icon-style {
+		font-size: 1.5rem;
+		color: #fff;
+	}
+	.college-name-text {
+		font-size: 0.7rem;
+	}
+	.college-add-text {
+		font-size: 0.6rem;
+	}
+	.col-2-text {
+		font-size: 1.1rem;
+	}
+	.col-3-head {
+		font-size: 1.25rem;
+	}
+	.col-3-sub {
+		font-size: 1rem;
+	}
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+	.social-div a {
+		margin-left: 0.75rem;
+	}
+	/* .social-div {
+		margin-left: 1.6rem;
+	} */
+	.icon-style {
+		font-size: 1.25rem;
+		color: #fff;
+	}
+	.college-name-text {
+		font-size: 0.75rem;
+	}
+	.college-add-text {
+		font-size: 0.7rem;
+	}
+	.col-2-text {
+		font-size: 1.25rem;
+	}
+	.col-3-head {
+		font-size: 1.5rem;
+	}
+	.col-3-sub {
+		font-size: 1.25rem;
+	}
 }
