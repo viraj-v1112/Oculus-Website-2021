@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
-import Footer from '../components/Footer/Footer2';
+import AppDownload from '../components/AppDownload/AppDownload';
+import Footer from '../components/Footer/Footer';
 
 const Landing = () => {
   return (
     <Fragment>
+      <AppDownload />
       <Footer />
     </Fragment>
   );
