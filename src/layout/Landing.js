@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Footer from '../components/Footer/Footer2';
 
 const Landing = () => {
-  return <div>Landing Page</div>;
+  return (
+    <Fragment>
+      <Footer />
+    </Fragment>
+  );
 };
 
 export default Landing;
