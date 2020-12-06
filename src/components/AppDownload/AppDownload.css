@@ -1,38 +1,39 @@
 .back-app {
-  background-color: #000;
-  color: #fff;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 1.5rem;
+	background-color: #000;
+	color: #fff;
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 .app-logo {
-  background-image: url('../../assets/images/Official\ App\ Title.png');
-  margin-top: 10rem;
-  background-repeat: no-repeat;
-  height: 5rem;
-  width: 14rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	/* background-image: url('../../assets/images/Official\ App\ Title.png');
+	background-repeat: no-repeat; */
+	height: 6rem;
+	width: 16rem;
+	/* margin-top: 10rem; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	display: block;
 }
 
 .app-image {
-  background-image: url('../../assets/images/MobileApp1-removebg-preview.png');
-  /* margin-top: 3.5rem; */
-  background-repeat: no-repeat;
-  height: 25rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	background-image: url('../../assets/images/MobileApp1-removebg-preview.png');
+	/* margin-top: 3.5rem; */
+	background-repeat: no-repeat;
+	height: 25rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .button-center {
-  margin-left: calc(22.5%);
-  margin-right: calc(22.5%);
+	margin-left: calc(22.5%);
+	margin-right: calc(22.5%);
 }
 
 /* Extra small devices (phones, 400px and down) */

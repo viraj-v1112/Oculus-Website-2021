@@ -36,10 +36,6 @@ const Footer = () => {
 									</a>
 								))}
 							</div>
-							{/* <span class='fa-stack fa-5x'> */}
-							{/* <i class='fa fa-circle fa-stack-2x icon-background5' /> */}
-							{/* <i class='fa fa-instagram p-2 icon-background5' /> */}
-							{/* </span> */}
 						</ul>
 					</div>
 				</div>

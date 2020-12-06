@@ -11,6 +11,8 @@ const Button = styled.button`
 	font-weight: bold;
 	font-size: 1.25rem;
 	padding: 0.5rem 1.25rem;
+	margin: 0 auto;
+	display: block;
 `;
 
 const CustomButton = ({ buttonText, link, classname }) => {
