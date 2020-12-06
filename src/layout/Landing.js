@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import AppDownload from '../components/AppDownload/AppDownload';
+import Cause from '../components/Cause/Cause';
 import Footer from '../components/Footer/Footer';
-// import MainHeader from '../components/Header/MainHeader';
+import CustomNavbar from '../components/Navbar/CustomNavbar';
 
 const Landing = () => {
   return (
     <Fragment>
-      {/* <MainHeader /> */}
+      <CustomNavbar />
+      <Cause />
       <AppDownload />
       <Footer />
     </Fragment>

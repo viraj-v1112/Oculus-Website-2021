@@ -30,7 +30,6 @@ ul#social li {
 #logo {
   background-image: url('../../assets/images/OculusLogoIconWhite2.png');
   margin-top: 3.5rem;
-
   background-repeat: no-repeat;
   height: 4rem;
   width: 14rem;
@@ -57,7 +56,6 @@ ul#social li {
   font-family: 'Baloo Tamma 2';
   font-style: normal;
   font-weight: bold;
-
   font-size: 1.5rem;
   text-align: center;
   color: #ffffff;
@@ -74,7 +72,6 @@ ul#social li {
   font-family: 'Baloo Tamma 2';
   font-style: normal;
   font-weight: bold;
-
   font-size: 1.5rem;
   text-align: center;
   color: #ffffff;
@@ -84,15 +81,14 @@ ul#social li {
   text-decoration: none;
   color: #fff;
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-
 .social-div {
   text-align: center;
 }
 .social-div a {
   margin-left: 0.75rem;
 }
+/* Large devices (laptops/desktops, 992px and up) */
+
 .icon-style {
   font-size: 1.5rem;
   color: #fff;
@@ -115,50 +111,30 @@ ul#social li {
   font-size: 1.5rem;
 }
 
-/* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px) {
-  .social-div a {
-    margin-left: 0.5rem;
+@media only screen and (min-width: 321px) and (max-width: 767px) {
+  ul li {
+    padding: 0.6rem 0.6rem 0rem 0.6rem;
   }
-  /* .social-div {
-		margin-left: calc(15%);
-		margin-right: calc(15%);
-	} */
-  .icon-style {
-    font-size: 1.25rem;
-    color: #fff;
+  #logo {
+    margin-top: 0;
   }
-  .college-name-text {
-    font-size: 0.7rem;
+  .footer-links {
+    display: none;
   }
-  .college-add-text {
-    font-size: 0.6rem;
-  }
-  .col-2-text {
-    font-size: 1.1rem;
-  }
-  .col-3-head {
-    font-size: 1.25rem;
-  }
-  .col-3-sub {
-    font-size: 1rem;
-  }
-}
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 400px) {
   .social-div a {
     margin-left: 0.65rem;
   }
   .icon-style {
     font-size: 1.5rem;
     color: #fff;
+    margin-bottom: 0.5rem;
   }
   .college-name-text {
     font-size: 0.7rem;
   }
   .college-add-text {
     font-size: 0.6rem;
+    margin-bottom: 0;
   }
   .col-2-text {
     font-size: 1.1rem;
@@ -170,8 +146,8 @@ ul#social li {
     font-size: 1rem;
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .social-div a {
     margin-left: 0.75rem;
   }
