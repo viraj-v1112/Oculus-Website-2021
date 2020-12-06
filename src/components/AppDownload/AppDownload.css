@@ -1,53 +1,61 @@
 .back-app {
-	background-color: #000;
-	color: #fff;
-	font-family: Montserrat;
-	font-weight: bold;
-	font-size: 1.2rem;
+  background-color: #121212;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .app-logo {
-	/* background-image: url('../../assets/images/Official\ App\ Title.png');
+  /* background-image: url('../../assets/images/Official\ App\ Title.png');
 	background-repeat: no-repeat; */
-	height: 6rem;
-	width: 16rem;
-	/* margin-top: 10rem; */
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	display: block;
+  height: 6rem;
+  width: 16rem;
+  /* margin-top: 10rem; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .app-image {
-	background-image: url('../../assets/images/MobileApp1-removebg-preview.png');
-	/* margin-top: 3.5rem; */
-	background-repeat: no-repeat;
-	height: 25rem;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+  /* background-image: url('../../assets/images/MobileMockup.png'); */
+  /* margin-top: 3.5rem; */
+  /* background-repeat: no-repeat; */
+  height: 25rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .button-center {
-	margin-left: calc(22.5%);
-	margin-right: calc(22.5%);
+  margin-left: calc(22.5%);
+  margin-right: calc(22.5%);
 }
 
-/* Extra small devices (phones, 400px and down) */
-@media only screen and (max-width: 400px) {
+.mobile-app {
+  display: none;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (min-width: 400px) {
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 767px) {
+  .mobile-app {
+    display: block;
+  }
+  .laptop-app {
+    display: none;
+  }
+  .back-app {
+    font-size: 0.8rem;
+  }
+  .app-logo {
+    width: 10.5rem;
+    height: 4rem;
+  }
+  .app-image {
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
 }

@@ -1,0 +1,44 @@
+.navbar {
+  color: white !important;
+  font-family: 'Baloo Tamma 2';
+  font-size: 1.75rem;
+  background-color: #121212;
+  font-weight: 700;
+}
+
+.logo-icon {
+  margin: 0.5rem 1rem 0;
+  height: 4rem;
+  width: 3.75rem;
+}
+
+.nav-link,
+.nav-link:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  color: white !important;
+  border: none !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(237, 0, 204)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .nav-link,
+  .nav-link:hover {
+    color: rgb(237, 0, 204) !important;
+    text-decoration: none;
+  }
+  .logo-icon {
+    margin: 0.25rem 0.5rem 0;
+    height: 2.25rem;
+    width: 2rem;
+  }
+}
