@@ -35,7 +35,7 @@ const Footer = () => {
               <li className='col-3-head'>Join Us on</li>
               <div className='social-div'>
                 {Social_List.map((social) => (
-                  <a href={social.link}>
+                  <a href={social.link} key={social.id}>
                     <img
                       src={social.imagePath}
                       alt={social.name}

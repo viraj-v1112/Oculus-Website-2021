@@ -9,7 +9,7 @@ const CustomNavbar = () => {
         <img src={logo} className='logo-icon' />
       </a>
       <button
-        class='navbar-toggler'
+        className='navbar-toggler'
         type='button'
         data-toggle='collapse'
         data-target='#navbarSupportedContent'
@@ -17,7 +17,7 @@ const CustomNavbar = () => {
         aria-expanded='false'
         aria-label='Toggle navigation'
       >
-        <span class='navbar-toggler-icon'></span>
+        <span className='navbar-toggler-icon'></span>
       </button>
 
       <div
