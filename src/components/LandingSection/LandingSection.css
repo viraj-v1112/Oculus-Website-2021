@@ -1,0 +1,54 @@
+.landing-back {
+  height: 100vh;
+  position: relative;
+}
+
+.gif-class {
+  height: 100%;
+  width: 100%;
+}
+
+.oculus {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  width: 50%;
+  height: 27.5%;
+}
+
+.O {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  height: 27.5%;
+}
+.C {
+  position: absolute;
+  top: 45%;
+  left: 35.75%;
+  height: 27.5%;
+}
+.U1 {
+  position: absolute;
+  top: 45%;
+  left: 45.75%;
+  height: 27.5%;
+}
+.L {
+  position: absolute;
+  top: 45%;
+  left: 55.5%;
+  height: 27.5%;
+}
+.U2 {
+  position: absolute;
+  top: 45%;
+  left: 61.5%;
+  height: 27.5%;
+}
+.S {
+  position: absolute;
+  top: 45%;
+  left: 71.25%;
+  height: 27.5%;
+}

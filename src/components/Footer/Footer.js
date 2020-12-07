@@ -35,8 +35,15 @@ const Footer = () => {
               <li className='col-3-head'>Join Us on</li>
               <div className='social-div'>
                 {Social_List.map((social) => (
-                  <a href={social.link} className={`${social.class} p-2 mx-1`}>
-                    {' '}
+                  <a href={social.link}>
+                    <img
+                      src={social.imagePath}
+                      alt={social.name}
+                      style={{
+                        height: '3rem',
+                        width: '3rem',
+                      }}
+                    ></img>
                   </a>
                 ))}
               </div>

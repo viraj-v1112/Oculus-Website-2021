@@ -42,10 +42,14 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/00cd36dc15.js"
       crossorigin="anonymous"
     ></script>
+
     <style>
       body {
         cursor: url('%PUBLIC_URL%/favicon.png'), default !important;
@@ -62,4 +66,15 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    $(window).scroll(function (e) {
+      // add/remove class to navbar when scrolling to hide/show
+      var scroll = $(window).scrollTop();
+      if (scroll >= 150) {
+        $('.navbar').addClass('navbar-hide');
+      } else {
+        $('.navbar').removeClass('navbar-hide');
+      }
+    });
+  </script>
 </html>

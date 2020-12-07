@@ -1,10 +1,10 @@
 import React from 'react';
 import './CustomNavbar.css';
-import logo from '../../assets/images/Oculus white Logo.png';
+import logo from '../../assets/Oculus white Logo.png';
 
 const CustomNavbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-transparent'>
+    <nav className='navbar navbar-expand-lg navbar-dark fixed-top'>
       <a className='navbar-brand' href='https://oculus.spit.ac.in/home/'>
         <img src={logo} className='logo-icon' />
       </a>

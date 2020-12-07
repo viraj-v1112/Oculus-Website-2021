@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomButton from '../../shared/CustomButton';
-import CauseLogo from '../../assets/images/CauseTitle.png';
-import CauseImage from '../../assets/images/CauseImage.png';
+import CauseLogo from '../../assets/LandingSections/CauseTitle.png';
+import CauseImage from '../../assets/LandingSections/CauseImage.png';
 import './Cause.css';
 
 const Cause = () => {
