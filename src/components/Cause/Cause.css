@@ -1,36 +1,36 @@
-.back-app p {
-  text-align: justify;
-  text-justify: inter-word;
+.justify-para {
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 .cause-logo {
-  height: 6rem;
-  width: 16rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: block;
+	height: 6rem;
+	width: 16rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	display: block;
 }
 .mobile-cause {
-  display: none;
+	display: none;
 }
 
 .text-bg {
-  background-image: url('../../assets/LandingSections/BlackBG.png');
-  background-repeat: no-repeat;
-  background-position: center;
+	background-image: url('../../assets/LandingSections/BlackBG.png');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 @media only screen and (max-width: 767px) {
-  .cause-logo {
-    height: 4rem;
-    width: 10rem;
-  }
-  .mobile-cause {
-    display: block;
-  }
-  .laptop-cause {
-    display: none;
-  }
+	.cause-logo {
+		height: 4rem;
+		width: 10rem;
+	}
+	.mobile-cause {
+		display: block;
+	}
+	.laptop-cause {
+		display: none;
+	}
 }
