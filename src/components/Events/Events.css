@@ -1,62 +1,86 @@
-.carousel-div {
-	margin: 10rem 0;
+.react-multiple-carousel__arrow--left {
+  left: 1% !important;
 }
-.mobile-carousel {
-	display: none;
-}
-
-.carousel-indicators li {
-	display: inline-block;
-	border-radius: 100%;
-	width: 1rem;
-	height: 1rem;
-	margin: 0.675rem;
-	text-indent: 0;
-	cursor: pointer;
-	background-image: linear-gradient(to right, #ed00cc, #3f2669, #3700af, #00cdef);
-}
-.carousel-indicators .active {
-	width: 1rem;
-	height: 1rem;
-	background-image: linear-gradient(#fff, #e3e3e3) !important;
+.react-multiple-carousel__arrow--right {
+  left: 96% !important;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-	width: 3% !important;
+.animation-class {
+  animation-name: spin;
+  animation-duration: 5000ms;
 }
+
+.react-multi-carousel-item--active:focus {
+  height: 10rem !important;
+  /* display: none; */
+  transition: steps();
+  transition-duration: 300;
+  width: 100%;
+}
+
+.indi {
+  display: inline-block;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.675rem;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #ed00cc,
+    #3f2669,
+    #3700af,
+    #00cdef
+  );
+}
+
+.indi-active {
+  display: inline-block;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.675rem;
+  text-indent: 0;
+  cursor: pointer;
+  border: none;
+  background-image: linear-gradient(#fff, #e3e3e3) !important;
+}
+
 .events-logo {
-	height: 5rem;
-	width: 26rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	display: block;
+  height: 5rem;
+  width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 .event-name {
-	font-family: 'Baloo Tamma 2';
-	color: white;
-	font-size: 1.5rem;
+  font-family: 'Baloo Tamma 2';
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 .event-image {
-	margin: 1rem;
-	width: 87%;
+  margin: 1rem;
+  width: 83%;
 }
 
 @media only screen and (max-width: 767px) {
-	.mobile-carousel {
-		display: inline;
-	}
-	.laptop-carousel {
-		display: none;
-	}
-	.event-image {
-		margin: 1rem;
-		width: 50%;
-	}
-	.events-logo {
-		height: 3rem;
-		width: 15rem;
-	}
+  .event-image {
+    margin: 1rem;
+    width: 50%;
+  }
+  .events-logo {
+    height: 3rem;
+    width: 15rem;
+  }
+  .react-multiple-carousel__arrow--right {
+    left: 86% !important;
+  }
+  .react-multiple-carousel__arrow--left {
+    left: 4% !important;
+  }
 }

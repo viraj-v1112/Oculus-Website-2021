@@ -1,6 +1,10 @@
 .landing-back {
+  background-image: url('../../assets/Gif/Back.gif');
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
 }
 
 .gif-class {
@@ -13,7 +17,7 @@
 }
 .oculus {
   position: absolute;
-  top: 45%;
+  top: 60%;
   left: 25%;
   width: 50%;
   height: 27.5%;
