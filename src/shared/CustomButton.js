@@ -15,9 +15,9 @@ const Button = styled.button`
 	display: block;
 `;
 
-const CustomButton = ({ buttonText, link, classname }) => {
+const CustomButton = ({ buttonText, link, classname, animation }) => {
 	return (
-		<Button className={classname}>
+		<Button className={classname} data-aos={animation}>
 			<Link to={link} style={{ textDecoration: 'none', color: '#fff' }}>
 				{buttonText}
 			</Link>

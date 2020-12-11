@@ -12,6 +12,15 @@
 	margin-bottom: 1rem;
 	display: block;
 }
+img.cause-image {
+	width: 85%;
+	transition: transform .2s;
+}
+
+img.cause-image:hover {
+	transform: scale(1.25);
+}
+
 .mobile-cause {
 	display: none;
 }
