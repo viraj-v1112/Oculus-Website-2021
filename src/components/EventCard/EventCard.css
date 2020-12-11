@@ -1,0 +1,31 @@
+
+.back-app2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.2rem;
+    overflow-x: hidden;
+  }
+
+  #cardTitle{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  }
+
+  #cardText{
+      font-family: 'Baloo Tamma 2';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #ffffff;
+  }
