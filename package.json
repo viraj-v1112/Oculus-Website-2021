@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.4.0",
     "bootstrap": "^4.5.3",
+    "firebase": "^8.1.2",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
@@ -16,6 +17,7 @@
     "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },

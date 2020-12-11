@@ -21,6 +21,7 @@ const AppDownload = () => {
               classname='button-center mt-4'
               buttonText='Download Now'
               link='/'
+              authRequired='false'
             />
           </div>
           <div className='col col-lg-6 col-md-6 col-sm-12 col-12 '>
@@ -45,6 +46,7 @@ const AppDownload = () => {
             classname='button-center'
             buttonText='Download Now'
             link='/'
+            authRequired='false'
           />
         </div>
       </div>
