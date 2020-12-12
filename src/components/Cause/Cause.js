@@ -18,7 +18,7 @@ const Cause = () => {
 						data-aos='fade-right'
 						data-aos-duration='1000'
 					>
-						<img src={CauseImage} alt='Oculus For a Cause' />
+						<img src={CauseImage} alt='Oculus For a Cause' className='cause-image' />
 					</div>
 					<div className='col col-lg-6 col-md-6 col-sm-12 col-12 text-bg align-self-center py-5'>
 						<p className='justify-para' data-aos='fade-left' data-aos-duration='1000'>

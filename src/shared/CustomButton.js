@@ -28,11 +28,12 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const CustomButton = ({ buttonText, link, classname, authRequired }) => {
+const CustomButton = ({ buttonText, link, classname, authRequired, animation }) => {
 	var provider = new firebase.auth.GoogleAuthProvider();
 	return (
 		<Button
 			className={classname}
+			data-aos={animation}
 			onClick={(e) => {
 				if (authRequired === 'true') {
 					firebase

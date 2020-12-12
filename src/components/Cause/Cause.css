@@ -13,12 +13,12 @@
 	display: block;
 }
 img.cause-image {
-	width: 85%;
+	width: 90%;
 	transition: transform .2s;
 }
 
 img.cause-image:hover {
-	transform: scale(1.25);
+	transform: scale(1.15);
 }
 
 .mobile-cause {
