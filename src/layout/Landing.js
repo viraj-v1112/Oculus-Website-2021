@@ -7,16 +7,16 @@ import LandingSection from '../components/LandingSection/LandingSection';
 import CustomNavbar from '../components/Navbar/CustomNavbar';
 
 const Landing = () => {
-	return (
-		<Fragment>
-			<CustomNavbar />
-			<LandingSection />
-			<Cause />
-			<AppDownload />
-			<Event />
-			<Footer />
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      <CustomNavbar />
+      <LandingSection />
+      <Cause />
+      <AppDownload />
+      <Event />
+      <Footer />
+    </Fragment>
+  );
 };
 
 export default Landing;
