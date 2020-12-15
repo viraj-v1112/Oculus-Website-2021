@@ -1,55 +1,55 @@
 .back-app {
-  background-color: #121212;
-  color: #fff;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 1.2rem;
+	background-color: #121212;
+	color: #fff;
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 1.2rem;
 }
 
 .app-logo {
-  height: 6rem;
-  width: 16rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: block;
+	height: 6rem;
+	width: 16rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	display: block;
 }
 
 .app-image {
-  height: 25rem;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	height: 25rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .button-center {
-  margin-left: calc(22.5%);
-  margin-right: calc(22.5%);
+	margin-left: calc(22.5%);
+	margin-right: calc(22.5%);
 }
 
 .mobile-app {
-  display: none;
+	display: none;
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-app {
-    display: block;
-  }
-  .laptop-app {
-    display: none;
-  }
-  .back-app {
-    font-size: 0.8rem;
-  }
-  .app-logo {
-    width: 10.5rem;
-    height: 4rem;
-  }
-  .app-image {
-    height: 18rem;
-    margin-bottom: 1rem;
-  }
+	.mobile-app {
+		display: block;
+	}
+	.laptop-app {
+		display: none;
+	}
+	.back-app {
+		font-size: 0.8rem;
+	}
+	.app-logo {
+		width: 10.5rem;
+		height: 4rem;
+	}
+	.app-image {
+		height: 18rem;
+		margin-bottom: 1rem;
+	}
 }

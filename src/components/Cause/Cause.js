@@ -2,7 +2,6 @@ import React from 'react';
 import CustomButton from '../../shared/CustomButton';
 import CauseLogo from '../../assets/LandingSections/CauseTitle.png';
 import CauseImage from '../../assets/LandingSections/CauseImage.png';
-import Typing from 'react-typing-animation';
 import './Cause.css';
 
 const Cause = () => {
@@ -48,13 +47,11 @@ const Cause = () => {
 				</div>
 				<div className='row px-5 py-3 text-bg align-self-center'>
 					<p className='justify-para'>
-						{/* <Typing speed={20}> */}
 						We at SPIT believe that students cannot be called engineers with just their degrees. What makes
 						us engineers is a holistic development of our perspectives and being equipped to solve problems,
 						not just on circuits or computers, but also in the world around us. Oculus 2020 is proud to be
 						associated with the Cancer Patients Aid Association, India’s oldest and largest cancer NGO, and
 						be a part of its efforts to attain its noble goal
-						{/* </Typing> */}
 					</p>
 					<CustomButton classname='button-center' buttonText='Donate Now' link='/' />
 				</div>

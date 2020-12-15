@@ -13,7 +13,21 @@ ul#social li {
 
 .back {
 	padding: 2rem;
-	background-image: linear-gradient(to right, #ed00cc, #3f2669, #3700af, #00cdef);
+	background-image: linear-gradient(
+		to right top,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
 }
 #logo {
 	background-image: url('../../assets/FooterLogo/OculusLogoIconWhite2.png');

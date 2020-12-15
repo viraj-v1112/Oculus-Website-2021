@@ -1,21 +1,21 @@
 import React from 'react';
 import './EventCard.css';
 import CustomCard from '../../shared/CustomCard';
-import imgCause from '../../assets/LandingSections/CauseImage.png'
+import imgCause from '../../assets/LandingSections/CauseImage.png';
+import TempCard from './TempCard';
 
 const EventCard = () => {
 	return (
-		<div className='back-app2'>
-			<div className='container'>
-				<div className='row py-5 px-0 justify-content-center'>
+		<div>
+			{/* <CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
 						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
 						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
 						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
 						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
-						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>
-						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>		
-				</div>
-			</div>
+						<CustomCard cardTitle='Codatron' cardText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius' imagePath={imgCause}/>		 */}
+
+			<TempCard />
+			{/* <TempCard /> */}
 		</div>
 	);
 };
