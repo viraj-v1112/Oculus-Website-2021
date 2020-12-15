@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.css';
 
-const EventCard = ({ imagePath, eventName }) => {
+const EventCarouselCard = ({ imagePath, eventName }) => {
 	return (
 		<div className=' text-center'>
 			<img src={imagePath} alt={eventName} className='event-image' />
@@ -10,4 +10,4 @@ const EventCard = ({ imagePath, eventName }) => {
 	);
 };
 
-export default EventCard;
+export default EventCarouselCard;

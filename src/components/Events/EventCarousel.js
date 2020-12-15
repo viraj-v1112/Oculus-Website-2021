@@ -1,49 +1,66 @@
 import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Slider from 'react-slick';
+import EventCarouselCard from './EventCarouselCard';
 import { Event_List } from './EventText';
-import EventCard from './EventCard';
 import './Events.css';
 
-const responsive = {
-	desktop: {
-		breakpoint: { max: 3000, min: 1024 },
-		items: 3,
-		slidesToSlide: 1
-	},
-	tablet: {
-		breakpoint: { max: 1024, min: 464 },
-		items: 3,
-		slidesToSlide: 1
-	},
-	mobile: {
-		breakpoint: { max: 464, min: 0 },
-		items: 1,
-		slidesToSlide: 1
-	}
-};
+const EventCarousel = () => {
+	const settings = {
+		className: 'center',
+		infinite: true,
+		speed: 500,
+		dots: true,
+		focusOnSelect: true,
+		useTransform: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		pauseOnHover: true,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 3000,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					centerMode: true,
+					centerPadding: '350px'
+				}
+			},
+			{
+				breakpoint: 1224,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					centerMode: true,
+					centerPadding: '250px'
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					infinite: true,
+					dots: true,
+					centerMode: true,
+					centerPadding: '90px'
+				}
+			}
+		]
+	};
 
-const CustomDot = ({ onClick, ...rest }) => {
-	const { active } = rest;
-	return <button className={active ? 'indi-active' : 'indi'} onClick={() => onClick()} />;
-};
-
-const TempCarousel = () => {
 	return (
-		<Carousel
-			responsive={responsive}
-			centerMode
-			className='container'
-			showDots={true}
-			customDot={<CustomDot />}
-			customTransition='all 0.45s ease-in-out'
-			transitionDuration={100}
-		>
+		<Slider {...settings}>
 			{Event_List.map((event) => (
-				<EventCard imagePath={event.imagePath} eventName={event.eventName} key={event.id} />
+				<EventCarouselCard imagePath={event.imagePath} eventName={event.eventName} key={event.id} />
 			))}
-		</Carousel>
+		</Slider>
 	);
 };
 
-export default TempCarousel;
+export default EventCarousel;
