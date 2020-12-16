@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import EventCard from '../components/EventCard/EventCard';
+import EventCard from '../components/Events/EventCard';
 import CustomNavbar from '../components/Navbar/CustomNavbar';
 import EventLogo from '../assets/LandingSections/EventsLogo.png';
 
