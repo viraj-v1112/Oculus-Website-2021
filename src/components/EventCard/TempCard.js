@@ -3,6 +3,7 @@ import ReactMorph from 'react-morph';
 import './TempCard1.css';
 import { createExpoIn, easeIn } from '@popmotion/easing';
 import CustomButton from '../../shared/CustomButton';
+import { FaRegCalendarCheck } from 'react-icons/fa';
 
 const strongerEase = createExpoIn(3);
 
@@ -29,10 +30,12 @@ const AnimateCard = () => {
 
 						<div className='Card-footer'>
 							<span {...from('left', { zIndex: 4 })}>
-								<small className='c-white'>Grossmünster</small>
+								<small className='c-white'>Category</small>
 							</span>
 							<span {...from('right', { zIndex: 4 })}>
-								<small className='c-white'>47.3769° N, 8.5417° E</small>
+								<small className='c-white'>
+									<FaRegCalendarCheck />Date
+								</small>
 							</span>
 						</div>
 					</a>
@@ -47,7 +50,7 @@ const AnimateCard = () => {
 						/>
 						<div />
 						<div className='p1'>
-							<button className='separator t-left' {...from('sep', { zIndex: 3 })}>
+							<button className='' {...from('sep', { zIndex: 3 })}>
 								Intersted
 							</button>
 						</div>
@@ -66,8 +69,10 @@ const AnimateCard = () => {
 
 						<div className='details-title'>
 							<div className='details-toolbar Card-footer'>
-								<small {...to('left')}>Grossmünster</small>
-								<small {...to('right')}>47.3769° N, 8.5417° E</small>
+								<small {...to('left')}>Category</small>
+								<small {...to('right')}>
+									<FaRegCalendarCheck /> Date
+								</small>
 							</div>
 
 							<h1 className='Card-title' {...to('title')}>
@@ -78,7 +83,11 @@ const AnimateCard = () => {
 						<div className='details-content'>
 							<div className='details-content-placeholder' {...to('content-placeholder')} />
 							<div className='center l-flex'>
-								<button {...to('sep')}> Intersted </button>
+								<div {...to('sep')}>
+									cybersecurity competition designed to solve challenges in cryptography, computer
+									networks and more. Scavenger Hunt to Reverse Engineering, we have got everything
+									covered. You may also stand a chance to compete in the Oculus Coding League.
+								</div>
 							</div>
 						</div>
 					</div>
