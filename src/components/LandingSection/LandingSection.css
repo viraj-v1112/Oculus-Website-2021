@@ -1,76 +1,72 @@
 .landing-back {
-	background-image: url('../../assets/Gif/Back.gif');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 100vh;
-	border-radius: 0 1rem 0 0;
+  background-image: url('../../assets/Gif/Back.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  border-radius: 0 1rem 0 0;
 }
 
 .gif-class {
-	height: 100%;
-	width: 100%;
-}
-.smooth-gradient {
-	/* background: linear-gradient(to right, #ed00cc, #3f2669, #3700af, #00cdef), linear-gradient(to top, rgb(187, 24, 24), rgb(62, 96, 190)); */
-	height: 4rem;
+  height: 100%;
+  width: 100%;
 }
 
 .oculus {
-	position: relative;
-	top: 40%;
-	display: block;
-	margin: auto;
-	height: auto;
-	width: auto;
-	max-width: 50%;
+  position: relative;
+  top: 40%;
+  display: block;
+  margin: auto;
+  height: auto;
+  width: auto;
+  max-width: 50%;
 }
 
 .O {
-	position: absolute;
-	top: 45%;
-	left: 25%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  height: 27.5%;
 }
 .C {
-	position: absolute;
-	top: 45%;
-	left: 35.75%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 35.75%;
+  height: 27.5%;
 }
 .U1 {
-	position: absolute;
-	top: 45%;
-	left: 45.75%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 45.75%;
+  height: 27.5%;
 }
 .L {
-	position: absolute;
-	top: 45%;
-	left: 55.5%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 55.5%;
+  height: 27.5%;
 }
 .U2 {
-	position: absolute;
-	top: 45%;
-	left: 61.5%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 61.5%;
+  height: 27.5%;
 }
 .S {
-	position: absolute;
-	top: 45%;
-	left: 71.25%;
-	height: 27.5%;
+  position: absolute;
+  top: 45%;
+  left: 71.25%;
+  height: 27.5%;
 }
 
 @media only screen and (max-width: 767px) {
-	.oculus {
-		position: relative;
-		top: 50%;
-		display: block;
-		margin: auto;
-		height: 15%;
-		width: auto;
-		max-width: 90%;
-	}
+  .oculus {
+    position: relative;
+    top: 50%;
+    display: block;
+    margin: auto;
+    height: 15%;
+    width: auto;
+    max-width: 90%;
+  }
 }

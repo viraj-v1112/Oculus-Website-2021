@@ -1,167 +1,177 @@
 small {
-	font-size: 0.7rem;
+  font-size: 0.7rem;
 }
 
 .container-card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Montserrat;
 }
 
 .Card {
-	position: relative;
-	z-index: 2;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	max-width: 17rem;
-	height: 18rem;
-	text-align: center;
-	padding: 1rem;
-	margin: 1rem 2rem 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 17rem;
+  height: 18rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 2rem 0;
 }
 
 .Card-content-placeholder,
 .Card-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	background-size: auto 100%;
-	background-position: center;
-	box-shadow: 0 0.938rem 2.5rem -0.625rem rgba(0, 0, 0, 0.9);
-	border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: auto 100%;
+  background-position: center;
+  box-shadow: 0 0.938rem 2.5rem -0.625rem rgba(0, 0, 0, 0.9);
+  border-radius: 0.5rem;
 }
 .image {
-	width: 100%;
-	z-index: -1;
-	padding-top: 1rem;
+  width: 100%;
+  z-index: -1;
+  padding-top: 1rem;
 }
 
 .Card-title {
-	display: inline-block;
-	font-weight: 700;
-	font-size: 1.25rem;
-	margin: 0;
-	color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+  color: #fff;
 }
 
 .Card-content-placeholder {
-	z-index: -2;
-	border-radius: 0.25rem;
-	background-image: linear-gradient(
-		to right bottom,
-		#ed00cc,
-		#c722bf,
-		#a32bae,
-		#822e9c,
-		#632c87,
-		#533b8f,
-		#434695,
-		#335097,
-		#176fb5,
-		#008fcd,
-		#00aee0,
-		#00cdef
-	);
-	box-shadow: 0 0.938rem 2.5rem -0.625rem rgba(0, 0, 0, 0.9);
+  z-index: -2;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(
+    to right bottom,
+    #ed00cc,
+    #c722bf,
+    #a32bae,
+    #822e9c,
+    #632c87,
+    #533b8f,
+    #434695,
+    #335097,
+    #176fb5,
+    #008fcd,
+    #00aee0,
+    #00cdef
+  );
+  box-shadow: 0 0.938rem 2.5rem -0.625rem rgba(0, 0, 0, 0.9);
 }
 .Card-content {
-	position: relative;
-	z-index: 1;
-	border-radius: 0.25rem;
-	/* display: inline-flex; */
-	flex-direction: column;
-	justify-content: space-between;
-	width: 100%;
-	max-width: 19rem;
-	height: 10rem;
-	margin: -4rem 1rem 1rem;
-	padding: 1rem;
-	font-size: 1rem;
-	text-align: left;
+  position: relative;
+  z-index: 1;
+  border-radius: 0.25rem;
+  /* display: inline-flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 19rem;
+  height: 10rem;
+  margin: -4rem 1rem 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: left;
 }
 .details-title,
 .Card-footer {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .details {
-	position: absolute;
-	top: 0;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 60rem;
-	width: 95%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 60rem;
+  width: 95%;
+  height: 100%;
 }
 .details-image {
-	position: relative; /* z-index: 2; */
-	background-size: cover;
-	background-position: center;
-	width: 100%;
-	height: 100%;
-	box-shadow: 0 0 2.5rem -0.625rem rgba(255, 255, 255, 0.9);
+  position: relative; /* z-index: 2; */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 2.5rem -0.625rem rgba(255, 255, 255, 0.9);
 }
 .details-title {
-	z-index: 3;
-	display: block;
-	text-align: center;
-	margin-top: -4rem;
-	margin-bottom: 1rem;
+  z-index: 3;
+  display: block;
+  text-align: center;
+  margin-top: -4rem;
+  margin-bottom: 1rem;
 }
 .details-content {
-	position: relative;
-	z-index: 1;
-	padding: 1rem;
-	color: #121212;
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  color: #121212;
 }
 .details-toolbar {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding: 1rem;
-	z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 3;
 }
 .details-content-placeholder {
-	background: #fff;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	background-image: linear-gradient(
-		to right bottom,
-		#ed00cc,
-		#c722bf,
-		#a32bae,
-		#822e9c,
-		#632c87,
-		#533b8f,
-		#434695,
-		#335097,
-		#176fb5,
-		#008fcd,
-		#00aee0,
-		#00cdef
-	);
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    to right bottom,
+    #ed00cc,
+    #c722bf,
+    #a32bae,
+    #822e9c,
+    #632c87,
+    #533b8f,
+    #434695,
+    #335097,
+    #176fb5,
+    #008fcd,
+    #00aee0,
+    #00cdef
+  );
 }
 .desc-text {
-	font-size: 0.75rem;
-	font-weight: 300;
+  font-size: 0.75rem;
+  font-weight: 300;
 }
 .p1 {
-	padding: 4rem 1rem 0;
+  padding: 4rem 1rem 0;
 }
 .c-white {
-	color: white;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .details {
+    height: 115%;
+  }
+  .col-space-class {
+    margin-bottom: 2rem;
+    margin-top: 0 !important;
+  }
 }
