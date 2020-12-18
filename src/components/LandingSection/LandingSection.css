@@ -4,7 +4,7 @@
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
-	/* position: relative; */
+	border-radius: 0 1rem 0 0;
 }
 
 .gif-class {
@@ -73,7 +73,4 @@
 		width: auto;
 		max-width: 90%;
 	}
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
 }

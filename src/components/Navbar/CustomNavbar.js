@@ -1,55 +1,55 @@
 import React from 'react';
 import './CustomNavbar.css';
 import logo from '../../assets/Oculus white Logo.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { Fragment } from 'react';
+import MobileNav from './MobileNav';
+import { animateScroll as scroll } from 'react-scroll';
 
-const CustomNavbar = () => {
-  return (
-    <nav className='navbar navbar-expand-lg navbar-dark fixed-top'>
-      <Link to='/' className='navbar-brand'>
-        <img src={logo} className='logo-icon' alt='logo' />
-      </Link>
-      <button
-        className='navbar-toggler'
-        type='button'
-        data-toggle='collapse'
-        data-target='#navbarSupportedContent'
-        aria-controls='navbarSupportedContent'
-        aria-expanded='false'
-        aria-label='Toggle navigation'
-      >
-        <span className='navbar-toggler-icon' />
-      </button>
+const CustomNavbar = (props) => {
+	const scrollToBottom = () => {
+		scroll.scrollToBottom();
+	};
 
-      <div
-        className='collapse navbar-collapse text-right'
-        id='navbarSupportedContent'
-      >
-        <ul className='navbar-nav ml-auto'>
-          <li className='nav-item '>
-            <p className='nav-link'>
-              <Link to='/events'>Events</Link>
-            </p>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>
-              Donation Drive
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>
-              Sponsors
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+	return (
+		<Fragment>
+			<div className='laptop-nav'>
+				<nav className='navbar navbar-expand-md navbar-dark fixed-top'>
+					<Link to='/' className='navbar-brand'>
+						<img src={logo} className='logo-icon' alt='logo' />
+					</Link>
+					<div className='collapse navbar-collapse text-right'>
+						<ul className='navbar-nav ml-auto'>
+							<li className='nav-item '>
+								<p className='nav-link'>
+									<NavLink to='/events'>Events</NavLink>
+								</p>
+							</li>
+							<li className='nav-item'>
+								<a className='nav-link' href='#'>
+									Donation Drive
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a className='nav-link' href='#'>
+									Sponsors
+								</a>
+							</li>
+							<li className='nav-item'>
+								<a className='nav-link' href='#' onClick={scrollToBottom} duration={2000}>
+									Contact Us
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				{props.children}
+			</div>
+			<div className='mobile-nav'>
+				<MobileNav {...props} />
+			</div>
+		</Fragment>
+	);
 };
 
 export default CustomNavbar;

@@ -10,6 +10,11 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Oculus 2021</title>
 
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.3/css/line.css"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -53,13 +58,11 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
     $(window).scroll(function (e) {
       // add/remove class to navbar when scrolling to hide/show
       var scroll = $(window).scrollTop();
-      if (scroll >= 150) {
+      if (scroll >= 110) {
         $('.navbar').addClass('navbar-hide');
       } else {
         $('.navbar').removeClass('navbar-hide');

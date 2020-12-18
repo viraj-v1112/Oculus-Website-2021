@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
-import './LandingSection.css';
-import BackGif from '../../assets/Gif/Back.gif';
 import Oculusfront from '../../assets/OculusLogoFront/Oculus Front.png';
+import './LandingSection.css';
 // import O from '../../assets/OculusLogoFront/O.png';
 // import C from '../../assets/OculusLogoFront/C.png';
 // import U1 from '../../assets/OculusLogoFront/U1.png';
@@ -22,7 +21,6 @@ const LandingSection = () => {
         <img src={U2} alt='Oculus' className='U2' />
         <img src={S} alt='Oculus' className='S' /> */}
 			</div>
-			<div className='smooth-gradient' />
 		</Fragment>
 	);
 };

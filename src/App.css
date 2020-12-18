@@ -1,62 +1,53 @@
 body {
-  background-color: #1e1e23;
-  color: white;
+	background-color: #1e1e23;
+	color: white;
 }
 
 a,
 a:hover,
 a:focus {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 *:focus {
-  outline: 0 !important;
-  box-shadow: none;
+	outline: 0 !important;
+	box-shadow: none;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'),
-    url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
-  src: local('Montserrat'),
-    url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
-  src: local('Montserrat'),
-    url(./assets/fonts/Montserrat-ExtraBold.ttf) format('truetype');
-  src: local('Montserrat'),
-    url(./assets/fonts/Montserrat-Medium.ttf) format('truetype');
-  src: local('Montserrat'),
-    url(./assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
+	font-family: 'Montserrat';
+	src: local('Montserrat'), url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
+	src: local('Montserrat'), url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+	src: local('Montserrat'), url(./assets/fonts/Montserrat-ExtraBold.ttf) format('truetype');
+	src: local('Montserrat'), url(./assets/fonts/Montserrat-Medium.ttf) format('truetype');
+	src: local('Montserrat'), url(./assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Baloo Tamma 2';
-  src: local('Baloo Tamma 2'),
-    url(./assets/fonts/BalooTamma2-Bold.ttf) format('truetype');
-  src: local('Baloo Tamma 2'),
-    url(./assets/fonts/BalooTamma2-ExtraBold.ttf) format('truetype');
-  src: local('Baloo Tamma 2'),
-    url(./assets/fonts/BalooTamma2-Medium.ttf) format('truetype');
-  src: local('Baloo Tamma 2'),
-    url(./assets/fonts/BalooTamma2-Regular.ttf) format('truetype');
-  src: local('Baloo Tamma 2'),
-    url(./assets/fonts/BalooTamma2-SemiBold.ttf) format('truetype');
+	font-family: 'Baloo Tamma 2';
+	src: local('Baloo Tamma 2'), url(./assets/fonts/BalooTamma2-Bold.ttf) format('truetype');
+	src: local('Baloo Tamma 2'), url(./assets/fonts/BalooTamma2-ExtraBold.ttf) format('truetype');
+	src: local('Baloo Tamma 2'), url(./assets/fonts/BalooTamma2-Medium.ttf) format('truetype');
+	src: local('Baloo Tamma 2'), url(./assets/fonts/BalooTamma2-Regular.ttf) format('truetype');
+	src: local('Baloo Tamma 2'), url(./assets/fonts/BalooTamma2-SemiBold.ttf) format('truetype');
 }
 
 .back-app {
-  background-color: #1e1e23;
-  color: #fff;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 1.2rem;
+	background-color: #1e1e23;
+	color: #fff;
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: 3rem 0;
 }
 
 .button-center {
-  margin-left: calc(22.5%);
-  margin-right: calc(22.5%);
+	margin-left: calc(22.5%);
+	margin-right: calc(22.5%);
 }
 
 .justify-para {
-  text-align: justify;
-  text-justify: inter-word;
+	text-align: justify;
+	text-justify: inter-word;
 }
