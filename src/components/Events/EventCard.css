@@ -165,10 +165,10 @@ small {
 .c-white {
 	color: white;
 }
-/* .blur {
+.blur {
 	opacity: 0.5;
 	pointer-events: none;
-} */
+}
 @media only screen and (max-width: 767px) {
 	.details {
 		height: 115%;

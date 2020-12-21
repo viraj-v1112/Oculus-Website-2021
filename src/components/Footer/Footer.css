@@ -32,7 +32,6 @@ ul#social li {
 #logo {
 	background-image: url('../../assets/FooterLogo/OculusLogoIconWhite2.png');
 	margin-top: 3.5rem;
-
 	background-repeat: no-repeat;
 	height: 4rem;
 	width: 14rem;
@@ -111,6 +110,10 @@ ul#social li {
 	font-size: 1.5rem;
 }
 @media only screen and (min-width: 321px) and (max-width: 767px) {
+	.back {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	ul li {
 		padding: 0.6rem 0.6rem 0rem 0.6rem;
 	}
@@ -146,6 +149,10 @@ ul#social li {
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.back {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.social-div a {
 		margin-left: 0.75rem;
 	}

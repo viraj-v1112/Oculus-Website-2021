@@ -7,21 +7,34 @@
 	text-indent: 0;
 	cursor: pointer;
 	border: none;
-	background-image: linear-gradient(to right, #ed00cc, #3f2669, #3700af, #00cdef);
+	background-image: linear-gradient(
+		to right top,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
 }
-
+.slick-dots {
+	bottom: -3rem;
+}
 li.slick-active {
 	display: inline-block;
 	border-radius: 100%;
-	width: 1rem;
-	height: 1rem;
 	margin: 0.675rem;
 	text-indent: 0;
 	cursor: pointer;
 	border: none;
 	background-image: linear-gradient(#fff, #e3e3e3) !important;
 }
-
 .slick-dots li button,
 .slick-dots li button:hover,
 .slick-dots li button:focus {
@@ -31,29 +44,25 @@ li.slick-active {
 	opacity: 0;
 	padding: 0;
 }
-
 .events-logo {
 	height: 5rem;
-	width: 26rem;
+	/* width: 26rem; */
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	display: block;
 }
-
 .event-logo-big {
 	display: block;
 	margin: 5rem auto 0;
 }
-
 .event-name {
 	font-family: 'Baloo Tamma 2';
 	color: white;
 	font-size: 1.5rem;
 	margin-bottom: 2.5rem;
 }
-
 .event-image {
 	margin: 1rem;
 	width: 50%;
@@ -62,7 +71,6 @@ li.slick-active {
 .slick-slide {
 	opacity: 0.5;
 }
-
 .slick-current {
 	opacity: 1;
 	transform: scale(1.2, 1.2);
@@ -70,19 +78,24 @@ li.slick-active {
 .slick-current img {
 	width: 70%;
 }
-
 @media only screen and (max-width: 767px) {
 	.event-image {
 		margin: 1rem;
 	}
 	.events-logo {
 		height: 3rem;
-		width: 15rem;
+		width: 17rem;
 	}
 	.event-name {
 		font-size: 1rem;
 	}
 	.event-logo-big {
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 371px) {
+	.slick-dots li {
+		height: 0.75rem;
+		width: 0.75rem;
 	}
 }
