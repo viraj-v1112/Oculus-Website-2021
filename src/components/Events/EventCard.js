@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import ReactMorph from 'react-morph';
 import { Event_List } from './EventDetails';
-import './EventCard.css';
 import AnimateCard from './AnimateCard';
-import Temp from './Temp';
-
-function areEqual(prevState, nextState) {
-	console.log(prevState, nextState);
-	return true;
-}
+import './EventCard.css';
 
 const EventCard = () => {
 	const [ state, setState ] = useState({
@@ -24,24 +19,48 @@ const EventCard = () => {
 
 	const getStatus = () => {
 		var status = false;
-		for (let key in state) {
-			status = status || state[key];
+		for (var key in state) {
+			if (state[key]) {
+				status = true;
+				return { status, key };
+			}
 		}
-		return status;
+		return { status: status, key: key };
 	};
+
 	return (
 		<div className='row mt-4'>
 			{Event_List.map((eventdet) => (
-				<div
-					key={eventdet.id}
-					className={`col-lg-4 col-md-6 col-sm-12 col-12 mt-5 col-space-class ${getStatus() &&
-					!state[`${eventdet.id}`]
-						? 'blur'
-						: ''}`}
-					style={{ paddingTop: '40px', paddingBottom: '40px' }}
-				>
-					<Temp event={eventdet} key={eventdet.id} state={state} setState={setState} id={eventdet.id} />
-				</div>
+				<ReactMorph spring={{ stiffness: 170, damping: 26 }}>
+					{({ from, go, hide, to }) => (
+						<div
+							key={eventdet.id}
+							className={`col-lg-4 col-md-6 col-sm-12 col-12 mt-5 col-space-class ${getStatus().status &&
+							!state[`${eventdet.id}`]
+								? 'blur'
+								: ''}`}
+							style={{ paddingTop: '40px', paddingBottom: '40px' }}
+							onClick={() => {
+								if (getStatus().status) {
+									setState({ ...state, [getStatus().key]: false });
+								}
+							}}
+							on
+						>
+							<AnimateCard
+								event={eventdet}
+								key={eventdet.id}
+								state={state}
+								setState={setState}
+								id={eventdet.id}
+								from={from}
+								go={(val) => go(val)}
+								hide={hide}
+								to={to}
+							/>
+						</div>
+					)}
+				</ReactMorph>
 			))}
 		</div>
 	);

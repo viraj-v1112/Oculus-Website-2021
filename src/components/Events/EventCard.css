@@ -167,6 +167,8 @@ small {
 }
 .blur {
 	opacity: 0.5;
+}
+.blur a {
 	pointer-events: none;
 }
 @media only screen and (max-width: 767px) {

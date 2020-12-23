@@ -1,105 +1,102 @@
 .navbar {
-  color: white !important;
-  font-family: 'Baloo Tamma 2';
-  font-size: 1.75rem;
-  font-weight: 700;
-  opacity: 1;
-  transition: opacity 0.5s ease;
+	color: white !important;
+	font-family: 'Baloo Tamma 2';
+	font-size: 1.75rem;
+	font-weight: 700;
+	opacity: 1;
+	transition: opacity 0.5s ease;
 }
 
 .navbar-hide {
-  pointer-events: none;
-  opacity: 0;
+	pointer-events: none;
+	opacity: 0;
 }
 
 .logo-icon {
-  margin: 0.5rem 1rem 0;
-  height: 4rem;
-  width: 3.75rem;
+	margin: 0.5rem 1rem 0;
+	height: 4rem;
+	width: 3.75rem;
 }
 
 .nav-link,
 .nav-link:hover {
-  color: white !important;
-  text-decoration: none;
+	color: white !important;
+	text-decoration: none;
 }
 
 .active-link {
-  border-bottom: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    to right,
-    #ed00cc,
-    #c722bf,
-    #a32bae,
-    #822e9c,
-    #632c87,
-    #533b8f,
-    #434695,
-    #335097,
-    #176fb5,
-    #008fcd,
-    #00aee0,
-    #00cdef
-  );
-  background-image: linear-gradient(
-    to right,
-    #ed00cc,
-    #c722bf,
-    #a32bae,
-    #822e9c,
-    #632c87,
-    #533b8f,
-    #434695,
-    #335097,
-    #176fb5,
-    #008fcd,
-    #00aee0,
-    #00cdef
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+	pointer-events: none;
+	border-bottom: 2px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(
+		to right,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
+	background-image: linear-gradient(
+		to right,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-
 .active-link-mobile {
-  color: #000;
-  border-bottom: 2px solid #000;
+	color: #000;
+	border-bottom: 2px solid #000;
 }
-
 .mobile-nav {
-  display: none;
+	display: none;
 }
-
 .nav-div {
-  position: absolute;
-  top: 0;
-  width: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
-
 @media only screen and (max-width: 768px) {
-  .navbar {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-  .nav-link,
-  .nav-link:hover {
-    color: #fff !important;
-    text-decoration: none;
-  }
-  .logo-icon {
-    margin: 0.25rem 0.5rem 0;
-    height: 2.25rem;
-    width: 2rem;
-  }
-  .mobile-nav {
-    display: block;
-  }
-  .laptop-nav {
-    display: none;
-  }
-  .logo-icon {
-    margin: 2rem;
-    width: 3rem;
-    height: 3.15rem;
-  }
+	.navbar {
+		font-size: 1.25rem;
+		font-weight: 500;
+	}
+	.nav-link,
+	.nav-link:hover {
+		color: #fff !important;
+		text-decoration: none;
+	}
+	.logo-icon {
+		margin: 0.25rem 0.5rem 0;
+		height: 2.25rem;
+		width: 2rem;
+	}
+	.mobile-nav {
+		display: block;
+	}
+	.laptop-nav {
+		display: none;
+	}
+	.logo-icon {
+		margin: 2rem;
+		width: 3rem;
+		height: 3.15rem;
+	}
 }
