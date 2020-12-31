@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import firebase from 'firebase/app';
-// import { db, auth, storage } from '../config';
+import firebase from 'firebase/app';
+import { db, auth, storage } from '../config';
 import 'firebase/auth';
 
 const Button = styled.button`
@@ -25,8 +25,9 @@ const CustomButton = ({
   authRequired,
   animation,
   gradient,
+  onClick,
 }) => {
-  // var provider = new firebase.auth.GoogleAuthProvider();
+  var provider = new firebase.auth.GoogleAuthProvider();
   return (
     <Button
       className={classname}
@@ -37,30 +38,32 @@ const CustomButton = ({
           : 'linear-gradient(to right, #fff,#fff)',
         color: gradient ? '#fff' : '#000',
       }}
-      // onClick={(e) => {
-      // 	if (authRequired === 'true') {
-      // 		firebase
-      // 			.auth()
-      // 			.signInWithPopup(provider)
-      // 			.then(function(result) {
-      // 				// This gives you a Google Access Token. You can use it to access the Google API.
-      // 				var token = result.credential.accessToken;
-      // 				// The signed-in user info.
-      // 				var user = result.user;
-      // 				// ...
-      // 			})
-      // 			.catch(function(error) {
-      // 				// Handle Errors here.
-      // 				var errorCode = error.code;
-      // 				var errorMessage = error.message;
-      // 				// The email of the user's account used.
-      // 				var email = error.email;
-      // 				// The firebase.auth.AuthCredential type that was used.
-      // 				var credential = error.credential;
-      // 				// ...
-      // 			});
-      // 	}
-      // }}
+      // onClick={onClick}
+      onClick={(e) => {
+        onClick();
+        // if (authRequired === 'true') {
+        //   firebase
+        //     .auth()
+        //     .signInWithPopup(provider)
+        //     .then(function (result) {
+        //       // This gives you a Google Access Token. You can use it to access the Google API.
+        //       var token = result.credential.accessToken;
+        //       // The signed-in user info.
+        //       var user = result.user;
+        //       // ...
+        //     })
+        //     .catch(function (error) {
+        //       // Handle Errors here.
+        //       var errorCode = error.code;
+        //       var errorMessage = error.message;
+        //       // The email of the user's account used.
+        //       var email = error.email;
+        //       // The firebase.auth.AuthCredential type that was used.
+        //       var credential = error.credential;
+        //       // ...
+        //     });
+        // }
+      }}
     >
       {link ? (
         <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>
