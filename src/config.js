@@ -1,7 +1,8 @@
 import firebase from 'firebase';
-var firebaseConfig = {
+const firebaseConfig = {
 	apiKey: 'AIzaSyCoJ-VxYIOfogp5_3427zWL8N3tqUZdt_E',
 	authDomain: 'oculus2021-c12c7.firebaseapp.com',
+	databaseURL: 'https://oculus2021-c12c7-default-rtdb.firebaseio.com',
 	projectId: 'oculus2021-c12c7',
 	storageBucket: 'oculus2021-c12c7.appspot.com',
 	messagingSenderId: '987914637598',

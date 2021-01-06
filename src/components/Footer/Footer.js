@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Footer.css';
 import { Social_List } from './FooterText';
 import { animateScroll as scroll } from 'react-scroll';
+import FooterLogo from '../../assets/FooterLogo/OculusLogoIcon.png';
 
 const Footer = () => {
 	return (
@@ -11,7 +12,8 @@ const Footer = () => {
 				<div className='row'>
 					<div className='col col-lg-4 col-md-12 col-sm-12 col-12'>
 						<ul>
-							<div id='logo' />
+							{/* <div id='logo' /> */}
+							<img src={FooterLogo} alt='oculus' className='logo' />
 							<p className='college-name-text'>SARDAR PATEL INSTITUTE OF TECHNOLOGY</p>
 							<p className='college-add-text'>Munshi Nagar, Andheri(W), Mumbai-400058</p>
 						</ul>
