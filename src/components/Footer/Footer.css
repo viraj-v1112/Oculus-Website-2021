@@ -29,14 +29,10 @@ ul#social li {
 		#00cdef
 	);
 }
-#logo {
-	background-image: url('../../assets/FooterLogo/OculusLogoIconWhite2.png');
-	margin-top: 3.5rem;
-	background-repeat: no-repeat;
-	height: 4rem;
-	width: 14rem;
-	margin-left: auto;
-	margin-right: auto;
+.logo {
+	margin: 3.5rem auto 1rem;
+	display: block;
+	height: 3rem;
 }
 .college-name-text {
 	font-family: Montserrat;

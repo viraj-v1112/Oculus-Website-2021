@@ -54,3 +54,30 @@ a:focus {
 .text {
 	font-size: 1rem;
 }
+
+.category {
+	padding: 1rem;
+	border: none;
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+	border-radius: 20px;
+	background-image: linear-gradient(
+		to right,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
+	color: #1e1e23;
+	text-align: center;
+}
+.category:hover {
+	box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.9);
+}

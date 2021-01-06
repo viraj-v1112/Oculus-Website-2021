@@ -8,22 +8,25 @@ import AOS from 'aos';
 
 import './App.css';
 import 'aos/dist/aos.css';
+import EventState from './context/EventContext/EventState';
 
 AOS.init();
 
 const App = () => {
   return (
-    <Router>
-      <Fragment>
-        <CustomNavbar>
-          <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route exact path='/events' component={Events} />
-          </Switch>
-          <Footer />
-        </CustomNavbar>
-      </Fragment>
-    </Router>
+    <EventState>
+      <Router>
+        <Fragment>
+          <CustomNavbar>
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route exact path='/events' component={Events} />
+            </Switch>
+            <Footer />
+          </CustomNavbar>
+        </Fragment>
+      </Router>
+    </EventState>
   );
 };
 
