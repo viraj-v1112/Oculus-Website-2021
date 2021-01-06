@@ -4,11 +4,13 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import './CustomModal.css';
 import Button from '@material-ui/core/Button';
+import InputAdornment from '@material-ui/core/InputAdornment';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import CustomButton from './CustomButton';
 
 function getModalStyle() {
   const top = 50;
-  const left = 50;
+  const left = 49.5;
 
   return {
     top: `${top}%`,
@@ -38,13 +40,17 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: 'absolute',
+    minWidth: '30%',
+    maxWidth: '90%',
     width: 'fit-content',
     height: 'fit-content',
-    backgroundColor: '#1e1e23',
-    boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     borderRadius: '10%',
     alignItems: 'center',
+    background: 'rgba( 51, 80, 151, 0.40)',
+    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
+    backdropFilter: 'blur( 10px )',
+    border: '1px solid rgba( 255, 255, 255, 0.18 )',
   },
   root: {
     '& label.Mui-focused': {
@@ -61,6 +67,9 @@ const useStyles = makeStyles((theme) => ({
         borderColor: 'white',
       },
     },
+    '& .MuiInputAdornment-root': {
+      color: 'white',
+    },
   },
 }));
 
@@ -71,6 +80,7 @@ const CustomTextField = ({
   value,
   validators,
   errorMessages,
+  InputProps,
 }) => {
   const classes = useStyles();
   return (
@@ -83,9 +93,11 @@ const CustomTextField = ({
       value={value}
       validators={validators}
       errorMessages={errorMessages}
+      fullWidth
       InputLabelProps={{
         style: { color: '#fff' },
       }}
+      InputProps={InputProps}
     />
   );
 };
@@ -112,6 +124,7 @@ const CustomModal = ({ open, onClose }) => {
     <ThemeProvider theme={theme}>
       <Modal open={open} onClose={onClose}>
         <div style={modalStyle} className={classes.paper}>
+          <h4 className='my-4'>Enter Your Details..</h4>
           <ValidatorForm onSubmit={handleSubmit} className='form'>
             <CustomTextField
               label='Number'
@@ -120,6 +133,13 @@ const CustomModal = ({ open, onClose }) => {
               value={formData.number}
               validators={['required']}
               errorMessages={['this field is required']}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position='start' className={classes.root}>
+                    +91
+                  </InputAdornment>
+                ),
+              }}
             />
             <br />
             <CustomTextField
@@ -133,14 +153,15 @@ const CustomModal = ({ open, onClose }) => {
 
             <br />
 
-            <Button
+            {/* <Button
               variant='contained'
               type='submit'
               disabled={submitted}
               style={{ marginLeft: '30%', marginRight: '30%' }}
             >
               Submit
-            </Button>
+            </Button> */}
+            <CustomButton buttonText='Submit' />
           </ValidatorForm>
         </div>
       </Modal>
