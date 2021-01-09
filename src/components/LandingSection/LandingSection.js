@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Oculusfront from '../../assets/OculusLogoFront/Oculus Front.png';
+import Transparent from '../../assets/Gif/Transparency.png';
 import './LandingSection.css';
 // import O from '../../assets/OculusLogoFront/O.png';
 // import C from '../../assets/OculusLogoFront/C.png';
@@ -19,7 +20,7 @@ const LandingSection = () => {
         <img src={U1} alt='Oculus' className='U1' />
         <img src={L} alt='Oculus' className='L' />
         <img src={U2} alt='Oculus' className='U2' />
-        <img src={S} alt='Oculus' className='S' /> */}
+	<img src={S} alt='Oculus' className='S' /> */}
 			</div>
 		</Fragment>
 	);

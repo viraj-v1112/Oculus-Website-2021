@@ -76,7 +76,7 @@ li.slick-active {
 	transform: scale(1.2, 1.2);
 }
 .slick-current img {
-	width: 70%;
+	width: 80%;
 }
 @media only screen and (max-width: 767px) {
 	.event-image {

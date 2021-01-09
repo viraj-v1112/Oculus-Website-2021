@@ -1,56 +1,59 @@
 {
-  "name": "oculus-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.4.0",
-    "aos": "^2.3.4",
-    "firebase": "^8.1.2",
-    "netlify-cli": "^2.69.11",
-    "polished": "^4.0.5",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "react-material-ui-form-validator": "^2.1.1",
-    "react-morph": "^0.3.1",
-    "react-responsive-modal": "^6.0.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.1",
-    "react-scroll": "^1.8.1",
-    "react-slick": "^0.27.13",
-    "react-spring": "^8.0.27",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "jsx-a11y/anchor-is-valid": "off"
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "oculus-website",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^4.11.2",
+		"@testing-library/jest-dom": "^5.11.6",
+		"@testing-library/react": "^11.2.2",
+		"@testing-library/user-event": "^12.4.0",
+		"aos": "^2.3.4",
+		"firebase": "^8.1.2",
+		"netlify-cli": "^2.69.11",
+		"polished": "^4.0.5",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-floating-action-button": "^1.0.5",
+		"react-icons": "^4.1.0",
+		"react-material-ui-form-validator": "^2.1.1",
+		"react-morph": "^0.3.1",
+		"react-responsive-modal": "^6.0.0",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "^4.0.1",
+		"react-scroll": "^1.8.1",
+		"react-slick": "^0.27.13",
+		"react-spring": "^8.0.27",
+		"react-transition-group": "^4.4.1",
+		"styled-components": "^5.2.1",
+		"web-vitals": "^0.2.4"
+	},
+	"scripts": {
+		"analyze": "source-map-explorer 'build/static/js/*.js'",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"rules": {
+			"jsx-a11y/anchor-is-valid": "off"
+		}
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {}
 }

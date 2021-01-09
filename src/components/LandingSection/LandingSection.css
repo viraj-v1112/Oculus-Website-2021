@@ -1,9 +1,10 @@
 .landing-back {
-	background-image: url('../../assets/Gif/Back.gif');
+	background-color: white;
+	background-image: url('../../assets/Gif/Transparency.png'), url('../../assets/Gif/Back.gif');
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom left, center;
 	/* background-size: 100% 100%; */
-	background-size: cover;
+	background-size: 100%, cover;
 	height: 100vh;
 	border-radius: 0 1rem 0 0;
 }
@@ -21,6 +22,15 @@
 	height: 11rem;
 	width: auto;
 	max-width: 50%;
+}
+
+.transparent {
+	position: absolute;
+	/* top: 100%; */
+	bottom: 0%;
+	display: block;
+	width: 100%;
+	/* border: 1px solid black; */
 }
 
 .O {

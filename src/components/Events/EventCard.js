@@ -20,7 +20,6 @@ const EventCard = ({ category }) => {
 
 	const [ eventList, setEventList ] = useState(Event_List);
 	const [ open, setOpen ] = useState(false);
-	// const morphRef = useRef();
 
 	useEffect(
 		() => {
@@ -28,6 +27,17 @@ const EventCard = ({ category }) => {
 				const array = Event_List.filter((event) => event.category === category);
 				setEventList(array);
 			} else setEventList(Event_List);
+			setState({
+				1: false,
+				2: false,
+				3: false,
+				4: false,
+				5: false,
+				6: false,
+				7: false,
+				8: false,
+				9: false
+			});
 		},
 		[ category ]
 	);
@@ -44,7 +54,7 @@ const EventCard = ({ category }) => {
 	};
 
 	return (
-		<div className='row mt-4'>
+		<div className='row mt-4 ROW'>
 			{eventList.map((eventdet) => (
 				<div
 					key={eventdet.id}
