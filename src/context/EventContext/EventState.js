@@ -10,11 +10,19 @@ const EventState = (props) => {
 
   const [state, dispatch] = useReducer(EventReducer, initialState);
 
+  const setLoading = () => {
+    console.log('loaded');
+    dispatch({
+      type: 'SET_LOADING',
+    });
+  };
+
   return (
     <EventContext.Provider
       value={{
         events: state.events,
         loading: state.loading,
+        setLoading,
       }}
     >
       {props.children}
