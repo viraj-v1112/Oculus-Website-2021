@@ -1,11 +1,13 @@
-import React, { forwardRef, Fragment, useEffect, useImperativeHandle } from 'react';
+import React, { forwardRef, Fragment, useEffect, useImperativeHandle ,useContext} from 'react';
 import { createExpoIn } from '@popmotion/easing';
 import CustomButton from '../../shared/CustomButton';
 import { FaRegCalendarCheck, FaHeart } from 'react-icons/fa';
 import { IoCloseSharp } from 'react-icons/io5';
 import ReactMorph from 'react-morph';
 import './EventCard.css';
-
+import {SignIn} from '../../shared/onClick/SignIn'
+import {AuthContext} from '../../context/AuthContext/AuthContext'
+import Update from '../../shared/onClick/Update';
 const strongerEase = createExpoIn(3);
 
 const AnimateCard = React.memo(
@@ -15,6 +17,7 @@ const AnimateCard = React.memo(
 		// useEffect(() => {
 		// 	if (!state[id]) go(0);
 		// });
+		const user = useContext(AuthContext)
 
 		return (
 			<div className='container-card '>
@@ -119,9 +122,15 @@ const AnimateCard = React.memo(
 									buttonText='Interested'
 									gradient={false}
 									onClick={(e) => {
-										handleOpen();
+										// handleOpen();
+										if (user){
+											Update(user,eventName);
+										}
+										else{
+											SignIn(handleOpen,user,eventName);
+										}
 									}}
-									authRequired='true'
+									// authRequired='true'
 								/>
 							</div>
 						</div>

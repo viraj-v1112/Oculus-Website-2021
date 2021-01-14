@@ -6,15 +6,15 @@ import CustomNavbar from './components/Navbar/CustomNavbar';
 import Footer from './components/Footer/Footer';
 import AOS from 'aos';
 import EventState from './context/EventContext/EventState';
-
+import AuthState from './context/AuthContext/AuthState';
 import './App.css';
 import 'aos/dist/aos.css';
 
 AOS.init();
 
 const App = () => {
-	console.log(document.readyState);
 	return (
+		<AuthState>
 		<EventState>
 			<Router>
 				<Fragment>
@@ -28,6 +28,8 @@ const App = () => {
 				</Fragment>
 			</Router>
 		</EventState>
+		</AuthState>
+
 	);
 };
 

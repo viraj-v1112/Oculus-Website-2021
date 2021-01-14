@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import CustomButton from './CustomButton';
+import Register from './onClick/Register'
+import {AuthContext} from '../context/AuthContext/AuthContext'
 
 function getModalStyle() {
 	const top = 50;
@@ -94,7 +96,7 @@ const CustomTextField = ({ label, onChange, name, value, validators, errorMessag
 	);
 };
 
-const CustomModal = ({ open, onClose }) => {
+const CustomModal = ({ open, onClose ,oevent}) => {
 	const classes = useStyles();
 	const [ modalStyle ] = React.useState(getModalStyle);
 
@@ -110,7 +112,9 @@ const CustomModal = ({ open, onClose }) => {
 
 	const handleSubmit = () => {
 		setSubmitted(true);
+		Register(formData, user,oevent)
 	};
+	const user = useContext(AuthContext)
 
 	return (
 		<ThemeProvider theme={theme}>
