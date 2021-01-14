@@ -6,7 +6,7 @@ import CustomNavbar from './components/Navbar/CustomNavbar';
 import Footer from './components/Footer/Footer';
 import AOS from 'aos';
 import EventState from './context/EventContext/EventState';
-
+import AuthState from './context/AuthContext/AuthState';
 import './App.css';
 import 'aos/dist/aos.css';
 
@@ -27,19 +27,21 @@ const App = () => {
     return <div>loading text</div>;
   } else {
     return (
-      <EventState>
-        <Router>
-          <Fragment>
-            <CustomNavbar>
-              <Switch>
-                <Route exact path='/' component={Landing} />
-                <Route exact path='/events' component={Events} />
-              </Switch>
-              <Footer />
-            </CustomNavbar>
-          </Fragment>
-        </Router>
-      </EventState>
+      <AuthState>
+        <EventState>
+          <Router>
+            <Fragment>
+              <CustomNavbar>
+                <Switch>
+                  <Route exact path='/' component={Landing} />
+                  <Route exact path='/events' component={Events} />
+                </Switch>
+                <Footer />
+              </CustomNavbar>
+            </Fragment>
+          </Router>
+        </EventState>
+      </AuthState>
     );
   }
 };

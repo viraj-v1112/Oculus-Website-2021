@@ -20,7 +20,7 @@ const EventCard = ({ category }) => {
 
 	const [ eventList, setEventList ] = useState(Event_List);
 	const [ open, setOpen ] = useState(false);
-
+	const [ oevent, setOevent] = useState("");
 	useEffect(
 		() => {
 			if (category !== '') {
@@ -77,7 +77,7 @@ const EventCard = ({ category }) => {
 								key={eventdet.id}
 								state={state}
 								setState={setState}
-								handleOpen={() => setOpen(true)}
+								handleOpen={() => {setOpen(true); setOevent(eventdet.eventName)}}
 								id={eventdet.id}
 								from={from}
 								go={(val) => go(val)}
@@ -89,7 +89,7 @@ const EventCard = ({ category }) => {
 					</ReactMorph>
 				</div>
 			))}
-			<CustomModal open={open} onClose={() => setOpen(false)} />
+			<CustomModal open={open} onClose={() => setOpen(false)} oevent={oevent} />
 		</div>
 	);
 };
