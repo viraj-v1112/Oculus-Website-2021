@@ -11,9 +11,8 @@ const Button = styled.button`
   padding: 0.5rem 1.25rem;
   margin: 0 auto;
   display: block;
+  line-height: 1;
 `;
-
-// Initialize Firebase
 
 const CustomButton = ({
   buttonText,
@@ -34,10 +33,6 @@ const CustomButton = ({
         color: gradient ? '#fff' : '#000',
       }}
       onClick={onClick}
-      // onClick={(e) => {
-      // 	onClick();
-      // 	SignIn();
-      // }}
     >
       {link ? (
         <Link to={link} style={{ textDecoration: 'none', color: 'inherit' }}>

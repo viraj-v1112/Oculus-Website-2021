@@ -3,12 +3,11 @@ import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import './CustomModal.css';
-import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import CustomButton from './CustomButton';
 import Register from './onClick/Register';
-import { AuthContext } from '../context/AuthContext/AuthContext';
+import AuthContext from '../context/AuthContext/AuthContext';
 
 function getModalStyle() {
   const top = 50;
@@ -118,15 +117,14 @@ const CustomModal = ({ open, onClose, oevent }) => {
     number: '',
     college: '',
   });
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = () => {
-    setSubmitted(true);
     Register(formData, user, oevent);
+    onClose();
   };
   const user = useContext(AuthContext);
 
@@ -160,17 +158,7 @@ const CustomModal = ({ open, onClose, oevent }) => {
               validators={['required']}
               errorMessages={['this field is required']}
             />
-
             <br />
-
-            {/* <Button
-              variant='contained'
-              type='submit'
-              disabled={submitted}
-              style={{ marginLeft: '30%', marginRight: '30%' }}
-            >
-              Submit
-            </Button> */}
             <CustomButton buttonText='Submit' />
           </ValidatorForm>
         </div>

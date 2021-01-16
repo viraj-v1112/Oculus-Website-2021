@@ -1,97 +1,100 @@
-import React, { useEffect, useRef, useState } from 'react';
-import ReactMorph from 'react-morph';
-import { Event_List } from './EventDetails';
-import AnimateCard from './AnimateCard';
+import React, { Fragment } from 'react';
+import { useState, useContext } from 'react';
+import CustomButton from '../../shared/CustomButton';
+import SignIn from '../../shared/onClick/SignIn';
+import AuthContext from '../../context/AuthContext/AuthContext';
+import Update from '../../shared/onClick/Update';
 import './EventCard.css';
-import CustomModal from '../../shared/CustomModal';
 
-const EventCard = ({ category }) => {
-	const [ state, setState ] = useState({
-		1: false,
-		2: false,
-		3: false,
-		4: false,
-		5: false,
-		6: false,
-		7: false,
-		8: false,
-		9: false
-	});
+const EventCard = ({ event, handleOpen }) => {
+  const [active, setActive] = useState(false);
+  const {
+    description,
+    category,
+    eventName,
+    imageURL,
+    likes,
+    prizes,
+    teamSizeAndFees,
+  } = event;
+  const user = useContext(AuthContext);
 
-	const [ eventList, setEventList ] = useState(Event_List);
-	const [ open, setOpen ] = useState(false);
-	const [ oevent, setOevent] = useState("");
-	useEffect(
-		() => {
-			if (category !== '') {
-				const array = Event_List.filter((event) => event.category === category);
-				setEventList(array);
-			} else setEventList(Event_List);
-			setState({
-				1: false,
-				2: false,
-				3: false,
-				4: false,
-				5: false,
-				6: false,
-				7: false,
-				8: false,
-				9: false
-			});
-		},
-		[ category ]
-	);
+  return (
+    <div id='card'>
+      <div id='profile'>
+        <img src={imageURL} alt='User' />
+        <h1>{eventName}</h1>
+        <div className={active ? 'info active' : 'info'}>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-5 text-light front-text'>{category}</div>
+              <div className='col-2'>
+                <i
+                  className='fa fa-info-circle text-light'
+                  onClick={() => setActive(!active)}
+                ></i>
+                <i
+                  className='fa fa-angle-down '
+                  onClick={() => setActive(!active)}
+                ></i>
+              </div>
+              <div className='col-5 text-light front-text align-middle'>
+                <span className='text-danger'> &#10084;</span> {likes}
+              </div>
+            </div>
+          </div>
 
-	const getStatus = () => {
-		var status = false;
-		for (var key in state) {
-			if (state[key]) {
-				status = true;
-				return { status, key };
-			}
-		}
-		return { status: status, key: key };
-	};
-
-	return (
-		<div className='row mt-4 ROW'>
-			{eventList.map((eventdet) => (
-				<div
-					key={eventdet.id}
-					className={`col-lg-4 col-md-6 col-sm-12 col-12 mt-5 col-space-class ${getStatus().status &&
-					!state[`${eventdet.id}`]
-						? 'blur'
-						: ''}`}
-					style={{ paddingTop: '40px', paddingBottom: '40px' }}
-					// onClick={(e) => {
-					// 	if (e.target.tagName !== 'BUTTON' && getStatus().status) {
-					// 		setState({ ...state, [getStatus().key]: false });
-					// 		// morphRef.current.handleGo();
-					// 	}
-					// }}
-				>
-					<ReactMorph spring={{ stiffness: 170, damping: 26 }}>
-						{({ from, go, hide, to }) => (
-							<AnimateCard
-								event={eventdet}
-								key={eventdet.id}
-								state={state}
-								setState={setState}
-								handleOpen={() => {setOpen(true); setOevent(eventdet.eventName)}}
-								id={eventdet.id}
-								from={from}
-								go={(val) => go(val)}
-								hide={hide}
-								to={to}
-								// ref={morphRef}
-							/>
-						)}
-					</ReactMorph>
-				</div>
-			))}
-			<CustomModal open={open} onClose={() => setOpen(false)} oevent={oevent} />
-		</div>
-	);
+          <div className='container info-para px-3'>
+            <h4 className='text-center mobile-head-text'>{eventName}</h4>
+            <p>
+              Aelaan-E-Jung is an inter college dance competition where
+              enthusiastic dancers from all over Mumbai compete for their glory.
+              All the event coordinators work in harmony to satisfy the demands
+              of the participants and synchronise effectively for better
+              execution of event.
+            </p>
+            <div className='row mt-4 ml-0'>
+              <div className='col-6'>
+                <h5 className='back-text'>Prizes</h5>
+                <p>₹ {prizes}</p>
+              </div>
+              <div className='col-6'>
+                <h5 className='back-text'>Registration</h5>
+                {teamSizeAndFees.map((arr, index) => {
+                  return (
+                    <div key={index}>
+                      <span>{arr[0]} </span>
+                      {arr[2] ? (
+                        <Fragment>
+                          <span>({arr[1]})</span> <span>: ₹ {arr[2]}</span>
+                        </Fragment>
+                      ) : (
+                        <span>: ₹ {arr[1]}</span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <CustomButton
+              classname='mt-4 btn btn-block'
+              buttonText='Interested'
+              gradient={false}
+              onClick={(e) => {
+                // handleOpen();
+                if (user) {
+                  Update(user, eventName);
+                } else {
+                  SignIn(handleOpen, user, eventName);
+                }
+              }}
+              // authRequired='true'
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default EventCard;

@@ -2,13 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import EventState from './context/EventContext/EventState';
 
 ReactDOM.render(
   <React.StrictMode>
-    <EventState>
-      <App />
-    </EventState>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import Oculusfront from '../../assets/OculusLogoFront/Oculus Front.png';
-import Transparent from '../../assets/Gif/Transparency.png';
+// import Transparent from '../../assets/Gif/Transparency.png';
 import './LandingSection.css';
 import EventContext from '../../context/EventContext/EventContext';
 // import O from '../../assets/OculusLogoFront/O.png';
