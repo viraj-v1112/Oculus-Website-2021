@@ -85,7 +85,7 @@ const NavText = styled.span`
 
 export default function MobileNav({ children }) {
 	const [ open, setOpen ] = useState(false);
-	const user = useContext(AuthContext);
+	const { user } = useContext(AuthContext);
 
 	useEffect(
 		() => {
