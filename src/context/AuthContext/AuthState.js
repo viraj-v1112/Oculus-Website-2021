@@ -8,6 +8,7 @@ const AuthState = ({ children }) => {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
+        // console.log(user);
         const { displayName, email, uid } = user;
         setUser({
           displayName,

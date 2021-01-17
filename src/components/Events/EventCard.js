@@ -4,6 +4,7 @@ import CustomButton from '../../shared/CustomButton';
 import SignIn from '../../shared/onClick/SignIn';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import Update from '../../shared/onClick/Update';
+import { useToasts } from 'react-toast-notifications';
 import './EventCard.css';
 
 const EventCard = ({ event, handleOpen }) => {
@@ -18,6 +19,7 @@ const EventCard = ({ event, handleOpen }) => {
     teamSizeAndFees,
   } = event;
   const user = useContext(AuthContext);
+  const { addToast } = useToasts();
 
   return (
     <div id='card'>
@@ -87,6 +89,10 @@ const EventCard = ({ event, handleOpen }) => {
                 } else {
                   SignIn(handleOpen, user, eventName);
                 }
+                addToast('Hello', {
+                  appearance: 'success',
+                  autoDismiss: true,
+                });
               }}
               // authRequired='true'
             />

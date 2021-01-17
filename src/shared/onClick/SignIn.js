@@ -6,6 +6,7 @@ const SignIn = (handleOpen, user, eventName) => {
   auth
     .signInWithPopup(googleProvider)
     .then((res) => {
+      console.log(res);
       var docRef = db.collection('Users').doc(res.user.email);
 
       docRef
