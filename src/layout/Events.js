@@ -5,10 +5,11 @@ import { animateScroll as scroll } from 'react-scroll';
 import { Category_List } from '../components/EventsCarousel/EventList';
 import EventContext from '../context/EventContext/EventContext';
 import EventCardMap from '../components/Events/EventCardMap';
+import EventCarousel from '../components/EventsCarousel/EventCarousel';
 
 const Events = () => {
   const location = useLocation();
-  const { events, getEvents } = useContext(EventContext);
+  const { events, getEvents ,loading} = useContext(EventContext);
   useEffect(() => {
     scroll.scrollToTop();
     getEvents();
@@ -24,7 +25,7 @@ const Events = () => {
           <img src={EventLogo} alt='Our Events' className='event-logo-big' />
         </div>
 
-        <div className='row mt-5'>
+        <div className='row mt-5 laptop-nav'>
           <div className='col-1' />
           {Category_List.map((obj, index) => (
             <div
@@ -46,7 +47,11 @@ const Events = () => {
           <div className='col-1' />
         </div>
 
-        <EventCardMap category={category} events={events} />
+        <div className="mobile-nav my-3">
+          <EventCarousel autoplay={false}  historyPush={false} setCategory={setCategory} CATEGORY={category} dots={false}/>
+        </div>
+
+        <EventCardMap category={category} events={events} loading={loading}  />
       </div>
     </div>
   );

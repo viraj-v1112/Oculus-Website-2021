@@ -10,7 +10,7 @@ const Event = () => {
 				<div className='row py-0 mb-5'>
 					<img src={EventLogo} alt='Our Events' className='events-logo' />
 				</div>
-				<EventCarousel />
+				<EventCarousel autoplay={true} historyPush={true} />
 			</div>
 		</div>
 	);

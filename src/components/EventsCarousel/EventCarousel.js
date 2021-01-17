@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
 import EventCarouselCard from './EventCarouselCard';
-import { Event_List, Category_List } from './EventList';
+import { Category_List } from './EventList';
 import './Events.css';
 
-const EventCarousel = () => {
+const EventCarousel = ({ autoplay, historyPush, setCategory, CATEGORY }) => {
 	const settings = {
 		className: 'center',
 		infinite: true,
@@ -12,7 +12,7 @@ const EventCarousel = () => {
 		dots: true,
 		focusOnSelect: true,
 		useTransform: true,
-		autoplay: true,
+		autoplay: autoplay,
 		autoplaySpeed: 2000,
 		pauseOnHover: true,
 		cssEase: 'linear',
@@ -46,7 +46,7 @@ const EventCarousel = () => {
 					slidesToScroll: 1,
 					arrows: false,
 					infinite: true,
-					dots: true,
+					dots: false,
 					centerMode: true,
 					centerPadding: '90px'
 				}
@@ -57,7 +57,14 @@ const EventCarousel = () => {
 	return (
 		<Slider {...settings}>
 			{Category_List.map((category) => (
-				<EventCarouselCard imagePath={category.imagePath} category={category.category} key={category.id} />
+				<EventCarouselCard
+					imagePath={category.imagePath}
+					category={category.category}
+					key={category.id}
+					historyPush={historyPush}
+					setCategory={setCategory}
+					CATEGORY={CATEGORY}
+				/>
 			))}
 		</Slider>
 	);

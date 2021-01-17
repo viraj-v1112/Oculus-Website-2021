@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Events.css';
 
-const EventCarouselCard = ({ imagePath, category }) => {
+const EventCarouselCard = ({ imagePath, category, historyPush, setCategory, CATEGORY }) => {
 	const history = useHistory();
 	return (
 		<div className=' text-center'>
@@ -11,10 +11,15 @@ const EventCarouselCard = ({ imagePath, category }) => {
 				alt={category}
 				className='event-image'
 				onClick={() => {
-					history.push({
-						pathname: '/events',
-						state: { category: category }
-					});
+					if (historyPush) {
+						history.push({
+							pathname: '/events',
+							state: { category: category }
+						});
+					} else {
+						if (CATEGORY === category) setCategory('');
+						else setCategory(category);
+					}
 				}}
 			/>
 

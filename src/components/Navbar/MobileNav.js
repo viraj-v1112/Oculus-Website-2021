@@ -1,14 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
 import logo from '../../assets/Oculus white Logo.png';
 import './CustomNavbar.css';
 import { animateScroll as scroll } from 'react-scroll';
+import AuthContext from '../../context/AuthContext/AuthContext';
+import Logout from '../../shared/onClick/Logout';
 
 const Phone = styled.div`
-	height: 100vh;
-	background: linear-gradient(to right bottom, #ed00cc, #3f2669, #3700af, #00cdef);
+	height: 150vh;
+	background: linear-gradient(
+		to right bottom,
+		#ed00cc,
+		#c722bf,
+		#a32bae,
+		#822e9c,
+		#632c87,
+		#533b8f,
+		#434695,
+		#335097,
+		#176fb5,
+		#008fcd,
+		#00aee0,
+		#00cdef
+	);
 `;
 
 const openStyles = css`transform: translateX(-150px) scale(0.95);`;
@@ -69,6 +85,7 @@ const NavText = styled.span`
 
 export default function MobileNav({ children }) {
 	const [ open, setOpen ] = useState(false);
+	const user = useContext(AuthContext);
 
 	useEffect(
 		() => {
@@ -111,6 +128,11 @@ export default function MobileNav({ children }) {
 							Contact Us
 						</NavText>
 					</NavButton>
+					{user && (
+						<NavButton>
+							<NavText onClick={() => Logout()}>Logout</NavText>
+						</NavButton>
+					)}
 				</Nav>
 			)}
 			<Content open={open}>

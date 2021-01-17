@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CustomNavbar.css';
 import logo from '../../assets/Oculus white Logo.png';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Fragment } from 'react';
 import MobileNav from './MobileNav';
 import { animateScroll as scroll } from 'react-scroll';
+import AuthContext from '../../context/AuthContext/AuthContext';
+import Logout from '../../shared/onClick/Logout';
 
 const CustomNavbar = (props) => {
 	const scrollToBottom = () => {
 		scroll.scrollToBottom();
 	};
-
+	const user = useContext(AuthContext);
 	return (
 		<Fragment>
 			<div className='laptop-nav'>
@@ -42,6 +44,14 @@ const CustomNavbar = (props) => {
 									Contact Us
 								</a>
 							</li>
+
+							{user && (
+								<li className='nav-item' onClick={() => Logout()}>
+									<a className='nav-link' href='#'>
+										Logout
+									</a>
+								</li>
+							)}
 						</ul>
 					</div>
 				</nav>
