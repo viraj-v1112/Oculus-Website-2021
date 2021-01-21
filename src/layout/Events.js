@@ -6,10 +6,11 @@ import { Category_List } from '../components/EventsCarousel/EventList';
 import EventContext from '../context/EventContext/EventContext';
 import EventCardMap from '../components/Events/EventCardMap';
 import EventCarousel from '../components/EventsCarousel/EventCarousel';
+import TempCard from '../components/Temp/TempCard';
 
 const Events = () => {
   const location = useLocation();
-  const { events, getEvents ,loading} = useContext(EventContext);
+  const { events, getEvents, loading } = useContext(EventContext);
   useEffect(() => {
     scroll.scrollToTop();
     getEvents();
@@ -47,11 +48,17 @@ const Events = () => {
           <div className='col-1' />
         </div>
 
-        <div className="mobile-nav my-3">
-          <EventCarousel autoplay={false}  historyPush={false} setCategory={setCategory} CATEGORY={category} dots={false}/>
+        <div className='mobile-nav my-3'>
+          <EventCarousel
+            autoplay={false}
+            historyPush={false}
+            setCategory={setCategory}
+            CATEGORY={category}
+            dots={false}
+          />
         </div>
 
-        <EventCardMap category={category} events={events} loading={loading}  />
+        <EventCardMap category={category} events={events} loading={loading} />
       </div>
     </div>
   );
