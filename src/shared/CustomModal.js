@@ -5,7 +5,7 @@ import Modal from '@material-ui/core/Modal';
 import './CustomModal.css';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import CustomButton from './CustomButton';
-import Register from './onClick/Register';
+// import Register from './onClick/Register';
 import AuthContext from '../context/AuthContext/AuthContext';
 import O from '../assets/O.png';
 
@@ -93,6 +93,7 @@ const CustomTextField = ({ label, onChange, name, value, validators, errorMessag
 const CustomModal = ({ open, onClose, oevent }) => {
 	const classes = useStyles();
 	const [ modalStyle ] = React.useState(getModalStyle);
+	const { user, Register } = useContext(AuthContext);
 
 	const [ formData, setFormData ] = useState({
 		number: '',
@@ -107,7 +108,6 @@ const CustomModal = ({ open, onClose, oevent }) => {
 		Register(formData, user, oevent);
 		onClose();
 	};
-	const user = useContext(AuthContext);
 
 	useEffect(
 		() => {

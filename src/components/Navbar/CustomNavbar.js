@@ -6,13 +6,12 @@ import { Fragment } from 'react';
 import MobileNav from './MobileNav';
 import { animateScroll as scroll } from 'react-scroll';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import Logout from '../../shared/onClick/Logout';
 
 const CustomNavbar = (props) => {
 	const scrollToBottom = () => {
 		scroll.scrollToBottom();
 	};
-	const user = useContext(AuthContext);
+	const { user, Logout } = useContext(AuthContext);
 	return (
 		<Fragment>
 			<div className='laptop-nav'>
