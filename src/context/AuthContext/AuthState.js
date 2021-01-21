@@ -43,7 +43,8 @@ const AuthState = ({ children }) => {
           if (doc.exists) {
             setUserData(doc.data());
           }
-        })
+        });
+    }
   };
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -67,7 +68,7 @@ const AuthState = ({ children }) => {
               const val = eventNames.indexOf(eventName);
 
               if (val === -1) Update(res.user, eventName);
-               else Notification('Already shown Interest!', 'warning');
+              else Notification('Already shown Interest!', 'warning');
             }
           })
           .catch(function (error) {
@@ -129,6 +130,25 @@ const AuthState = ({ children }) => {
       .catch(function (error) {
         // console.error('Error writing document: ', error);
       });
+    var emaildata = {
+      email: `${user.email}`,
+      event: `${event}`,
+    };
+
+    fetch('https://oculus-email.herokuapp.com/sendemail', {
+      body: JSON.stringify(emaildata),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'content-type': 'application/json',
+      },
+      method: 'POST',
+      mode: 'cors',
+      redirect: 'follow',
+      referrer: 'no-referrer',
+    }).then(function (response) {
+      console.log(response);
+    });
   };
 
   const Update = async (user, event) => {
@@ -200,6 +220,26 @@ const AuthState = ({ children }) => {
       .catch(function (error) {
         // console.log('Error getting document:', error);
       });
+
+    var emaildata = {
+      email: `${user.email}`,
+      event: `${event}`,
+    };
+
+    fetch('https://oculus-email.herokuapp.com/sendemail', {
+      body: JSON.stringify(emaildata),
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'content-type': 'application/json',
+      },
+      method: 'POST',
+      mode: 'cors',
+      redirect: 'follow',
+      referrer: 'no-referrer',
+    }).then(function (response) {
+      console.log(response);
+    });
   };
 
   const Logout = () => {

@@ -1,7 +1,7 @@
 import Cultural from '../../assets/Category/Cultural.png';
 import Technical from '../../assets/Category/Technical.png';
 import Pronite from '../../assets/Category/Pronite.png';
-import Literary from '../../assets/Category/Literary.png';
+import PreEvent from '../../assets/Category/PreEvents.png';
 import Fun from '../../assets/Category/Fun.png';
 
 export const Category_List = [
@@ -27,7 +27,7 @@ export const Category_List = [
   },
   {
     id: 5,
-    category: 'Literary',
-    imagePath: Literary,
+    category: 'PreEvent',
+    imagePath: PreEvent,
   },
 ];

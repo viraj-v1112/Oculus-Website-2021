@@ -24,14 +24,14 @@ const Theme = () => {
                 data-aos='fade-right'
                 data-aos-duration='1000'
               >
-                We at SPIT believe that students cannot be called engineers with
-                just their degrees. What makes us engineers is a holistic
-                development of our perspectives and being equipped to solve
-                problems, not just on circuits or computers, but also in the
-                world around us. Oculus 2020 is proud to be associated with the
-                Cancer Patients Aid Association, India’s oldest and largest
-                cancer NGO, and be a part of its efforts to attain its noble
-                goal
+                Films, photos, books, clothes, music... it's all so simple at
+                face value, but it has the incredible power to make us nostalgic
+                for earlier eras even if we never grew up in them. Oculus SPIT
+                aspires to bring back that warm feeling from your childhood,
+                that feeling when you hear songs from that era, when you look at
+                the movies and remember the good old days while dealing with the
+                present to bring you an amazing experience with Oculus in Retro
+                style.
               </p>
             </div>
             <div
@@ -62,13 +62,13 @@ const Theme = () => {
           </div>
           <div className='row px-5 align-self-center'>
             <p className='text justify-para'>
-              We at SPIT believe that students cannot be called engineers with
-              just their degrees. What makes us engineers is a holistic
-              development of our perspectives and being equipped to solve
-              problems, not just on circuits or computers, but also in the world
-              around us. Oculus 2020 is proud to be associated with the Cancer
-              Patients Aid Association, India’s oldest and largest cancer NGO,
-              and be a part of its efforts to attain its noble goal
+              Films, photos, books, clothes, music... it's all so simple at face
+              value, but it has the incredible power to make us nostalgic for
+              earlier eras even if we never grew up in them. Oculus SPIT aspires
+              to bring back that warm feeling from your childhood, that feeling
+              when you hear songs from that era, when you look at the movies and
+              remember the good old days while dealing with the present to bring
+              you an amazing experience with Oculus in Retro style.
             </p>
           </div>
         </div>

@@ -1,174 +1,174 @@
 ul {
-	list-style-type: none;
-	padding: 0.6rem 0.6rem 0.6rem 0rem;
+  list-style-type: none;
+  padding: 0.6rem 0.6rem 0.6rem 0rem;
 }
 
 ul li {
-	padding: 0.6rem 0.6rem 0.6rem 0rem;
+  padding: 0.6rem 0.6rem 0.6rem 0rem;
 }
 
 ul#social li {
-	display: inline;
+  display: inline;
 }
 
 .back {
-	padding: 2rem;
-	background-image: linear-gradient(
-		to right top,
-		#ed00cc,
-		#c722bf,
-		#a32bae,
-		#822e9c,
-		#632c87,
-		#533b8f,
-		#434695,
-		#335097,
-		#176fb5,
-		#008fcd,
-		#00aee0,
-		#00cdef
-	);
+  padding: 2rem 2rem 0 2rem;
+  background-image: linear-gradient(
+    to right top,
+    #ed00cc,
+    #c722bf,
+    #a32bae,
+    #822e9c,
+    #632c87,
+    #533b8f,
+    #434695,
+    #335097,
+    #176fb5,
+    #008fcd,
+    #00aee0,
+    #00cdef
+  );
 }
 .logo {
-	margin: 3.5rem auto 1rem;
-	display: block;
-	height: 3rem;
+  margin: 3.5rem auto 1rem;
+  display: block;
+  height: 3rem;
 }
 .college-name-text {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: bold;
-	text-align: center;
-	color: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
 }
 .college-add-text {
-	font-family: Montserrat;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 0.8rem;
-	text-align: center;
-	color: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #ffffff;
 }
 .col-2-text {
-	font-family: 'Baloo Tamma 2';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 1.5rem;
-	text-align: center;
-	color: #ffffff;
+  font-family: 'Baloo Tamma 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
 }
 .col-3-head {
-	font-family: 'Baloo Tamma 2';
-	font-style: normal;
-	font-weight: 900;
-	font-size: 2rem;
-	text-align: center;
-	color: #ffffff;
+  font-family: 'Baloo Tamma 2';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
 }
 .col-3-sub {
-	font-family: 'Baloo Tamma 2';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 1.5rem;
-	text-align: center;
-	color: #ffffff;
+  font-family: 'Baloo Tamma 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
 }
 .icon-style:hover {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .social-div {
-	text-align: center;
+  text-align: center;
 }
 .social-div a {
-	margin-left: 0.25rem;
+  margin-left: 0.25rem;
 }
 /* Large devices (laptops/desktops, 992px and up) */
 .icon-style {
-	font-size: 1.5rem;
-	color: #fff;
-	border: 2px solid white;
-	border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 .college-name-text {
-	font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 .college-add-text {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 .col-2-text {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .col-3-head {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 .col-3-sub {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 @media only screen and (min-width: 321px) and (max-width: 767px) {
-	.back {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	ul li {
-		padding: 0.6rem 0.6rem 0rem 0.6rem;
-	}
-	#logo {
-		margin-top: 0;
-	}
-	.footer-links {
-		display: none;
-	}
-	.social-div a {
-		margin-left: 0.65rem;
-	}
-	.icon-style {
-		font-size: 1.5rem;
-		color: #fff;
-		margin-bottom: 0.5rem;
-	}
-	.college-name-text {
-		font-size: 0.7rem;
-	}
-	.college-add-text {
-		font-size: 0.6rem;
-		margin-bottom: 0;
-	}
-	.col-2-text {
-		font-size: 1.1rem;
-	}
-	.col-3-head {
-		font-size: 1.25rem;
-	}
-	.col-3-sub {
-		font-size: 1rem;
-	}
+  .back {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  ul li {
+    padding: 0.6rem 0.6rem 0rem 0.6rem;
+  }
+  #logo {
+    margin-top: 0;
+  }
+  .footer-links {
+    display: none;
+  }
+  .social-div a {
+    margin-left: 0.65rem;
+  }
+  .icon-style {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .college-name-text {
+    font-size: 0.7rem;
+  }
+  .college-add-text {
+    font-size: 0.6rem;
+    margin-bottom: 0;
+  }
+  .col-2-text {
+    font-size: 1.1rem;
+  }
+  .col-3-head {
+    font-size: 1.25rem;
+  }
+  .col-3-sub {
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-	.back {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.social-div a {
-		margin-left: 0.75rem;
-	}
-	.icon-style {
-		font-size: 1.25rem;
-		color: #fff;
-	}
-	.college-name-text {
-		font-size: 0.75rem;
-	}
-	.college-add-text {
-		font-size: 0.7rem;
-	}
-	.col-2-text {
-		font-size: 1.25rem;
-	}
-	.col-3-head {
-		font-size: 1.5rem;
-	}
-	.col-3-sub {
-		font-size: 1.25rem;
-	}
+  .back {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .social-div a {
+    margin-left: 0.75rem;
+  }
+  .icon-style {
+    font-size: 1.25rem;
+    color: #fff;
+  }
+  .college-name-text {
+    font-size: 0.75rem;
+  }
+  .college-add-text {
+    font-size: 0.7rem;
+  }
+  .col-2-text {
+    font-size: 1.25rem;
+  }
+  .col-3-head {
+    font-size: 1.5rem;
+  }
+  .col-3-sub {
+    font-size: 1.25rem;
+  }
 }

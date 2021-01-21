@@ -6,7 +6,6 @@ import { Category_List } from '../components/EventsCarousel/EventList';
 import EventContext from '../context/EventContext/EventContext';
 import EventCardMap from '../components/Events/EventCardMap';
 import EventCarousel from '../components/EventsCarousel/EventCarousel';
-import TempCard from '../components/Temp/TempCard';
 
 const Events = () => {
   const location = useLocation();
