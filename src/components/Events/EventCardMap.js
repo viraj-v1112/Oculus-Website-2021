@@ -22,9 +22,13 @@ const EventCardMap = ({ category, events, loading }) => {
 		return <div>Loading</div>;
 	} else
 		return (
-			<div className='row mt-4'>
+			<div className='row mt-4 text-center'>
 				{eventList.map((eventdet, index) => (
-					<div key={index} className={`col-lg-4 col-md-6 col-sm-12 col-12 col-space-class`}>
+					<div
+						key={index}
+						className={`col-lg-4 col-md-6 col-sm-12 col-12`}
+						// style={{ float: 'none', margin: '0 auto' }}
+					>
 						<EventCard
 							key={index}
 							event={eventdet}
