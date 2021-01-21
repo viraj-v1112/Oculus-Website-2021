@@ -1,40 +1,35 @@
-.cause-logo {
-  height: 6rem;
-  width: 16rem;
+.theme-logo {
+  height: 7rem;
+  width: 17rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
   display: block;
 }
-img.cause-image {
+img.theme-image {
   width: 90%;
   transition: transform 0.2s;
-}
-
-img.cause-image:hover {
-  transform: scale(1.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mobile-cause {
   display: none;
 }
 
-/* .text-bg {
-  background-image: url('../../assets/LandingSections/BlackBG.png');
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
 @media only screen and (max-width: 767px) {
-  .cause-logo {
-    height: 4rem;
-    width: 10rem;
+  .theme-logo {
+    height: 5rem;
+    width: 11rem;
   }
   .mobile-cause {
     display: block;
   }
   .laptop-cause {
     display: none;
+  }
+  .back-app1 {
+    padding: 1rem 0 0.75rem 0 !important;
   }
 }
