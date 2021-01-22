@@ -1,47 +1,48 @@
 .app-logo {
-	height: 6rem;
-	width: 16rem;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	display: block;
+  height: 6rem;
+  width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .app-image {
-	height: 25rem;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	transition: transform 0.2s;
+  height: 27rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
 }
 
 img.app-image:hover {
-	transform: scale(1.15);
+  transform: rotate(20deg);
+  transform: scale(1.15);
 }
 
 .mobile-app {
-	display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {
-	.mobile-app {
-		display: block;
-	}
-	.laptop-app {
-		display: none;
-	}
-	.back-app {
-		font-size: 0.8rem;
-	}
-	.app-logo {
-		width: 10.5rem;
-		height: 4rem;
-	}
-	.app-image {
-		height: 18rem;
-		margin-bottom: 1rem;
-	}
+  .mobile-app {
+    display: block;
+  }
+  .laptop-app {
+    display: none;
+  }
+  .back-app {
+    font-size: 0.8rem;
+  }
+  .app-logo {
+    width: 10.5rem;
+    height: 4rem;
+  }
+  .app-image {
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
 }

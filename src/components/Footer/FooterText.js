@@ -33,7 +33,7 @@ export const Social_List = [
   },
   {
     id: 5,
-    link: 'https://www.facebook.com/watch/OculusSeesAll/',
+    link: 'https://wa.me/917083054655',
     name: 'whatsapp',
     imagePath: whatsapp,
   },

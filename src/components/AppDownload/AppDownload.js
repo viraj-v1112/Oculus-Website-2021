@@ -17,7 +17,7 @@ const AppDownload = () => {
             <img
               src={AppLogo}
               alt='mobile-app'
-              className='app-logo mb-5'
+              className='app-logo mb-5 mx-auto d-block'
               data-aos='zoom-in'
               data-aos-duration='1000'
             />
@@ -28,7 +28,7 @@ const AppDownload = () => {
             <CustomButton
               classname='button-center mt-4'
               buttonText='Download Now'
-              link='/'
+              link='https://play.google.com/store/apps/details?id=com.spit.fest.oculus'
               animation='zoom-in'
               gradient
             />
@@ -38,7 +38,9 @@ const AppDownload = () => {
             data-aos='fade-left'
             data-aos-duration='1000'
           >
-            <img src={Mobile} alt='mobile-app' className='app-image' />
+            <a href='https://play.google.com/store/apps/details?id=com.spit.fest.oculus'>
+              <img src={Mobile} alt='mobile-app' className='app-image' />
+            </a>
           </div>
         </div>
       </div>
@@ -57,7 +59,7 @@ const AppDownload = () => {
         <CustomButton
           classname='button-center mt-2'
           buttonText='Download Now'
-          link='/'
+          link='https://play.google.com/store/apps/details?id=com.spit.fest.oculus'
           gradient
         />
       </div>

@@ -27,7 +27,7 @@ export const Category_List = [
   },
   {
     id: 5,
-    category: 'PreEvent',
+    category: 'Pre Event',
     imagePath: PreEvent,
   },
 ];

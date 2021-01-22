@@ -11,13 +11,6 @@ const EventState = (props) => {
 
   const [state, dispatch] = useReducer(EventReducer, initialState);
 
-  // const setLoading = () => {
-  //   console.log('loaded');
-  //   dispatch({
-  //     type: 'SET_LOADING',
-  //   });
-  // };
-
   const getEvents = async () => {
     const eve = [];
     dispatch({ type: 'SET_LOADING' });
@@ -46,7 +39,6 @@ const EventState = (props) => {
       value={{
         events: state.events,
         loading: state.loading,
-        // setLoading,
         getEvents,
       }}
     >

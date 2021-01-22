@@ -34,7 +34,11 @@ const CustomNavbar = (props) => {
                 </p>
               </li>
               <li className='nav-item'>
-                <a className='nav-link' href='#'>
+                <a
+                  className='nav-link'
+                  target='_blank'
+                  href='https://www.ketto.org/fundraiser/oculus-for-a-cause?utm_source=external_ct&utm_medium=whatsapp&utm_Campaign=sm_campaigner_sac_w4'
+                >
                   Donation Drive
                 </a>
               </li>

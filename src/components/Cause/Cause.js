@@ -29,26 +29,35 @@ const Cause = () => {
               className='cause-image'
             />
           </div>
-          <div className='col col-lg-6 col-md-6 col-sm-12 col-12 text-bg align-self-center py-5'>
-            <p
-              className='justify-para'
+          <div className='col col-lg-6 col-md-6 col-sm-12 col-12 align-self-center py-5'>
+            <div
+              className='justify-para cause'
               data-aos='fade-left'
               data-aos-duration='1000'
             >
-              We at SPIT believe that students cannot be called engineers with
-              just their degrees. What makes us engineers is a holistic
-              development of our perspectives and being equipped to solve
-              problems, not just on circuits or computers, but also in the world
-              around us. Oculus 2021 is proud to be associated with Goonj, an
-              esteemed NGO, which aims to build an equitable relationship of
-              strength, sustenance and dignity between the cities and villages
-              using the under-utilized urban material as a tool to triggger
-              development with dignity, across the country.
-            </p>
+              <p>
+                Oculus 2021 will be supporting efforts of Goonj, an esteemed
+                NGO, which aims to lessen the bridge between the rural and urban
+                areas.
+              </p>
+              <p>
+                Taking the collective responsibility for the betterment of the
+                society, the students of SPIT will be organising a drive for
+                contributing clothes and other essential supplies in order to
+                support the needs of the people in disaster hit areas under the
+                campaign called Rahat. The fest also aims to raise funds for
+                disaster relief and rehabilitation programmes undertaken by
+                Goonj in various parts of the country.
+              </p>
+              <p>
+                Oculus 2021 will support this cause and work hand in hand to
+                enhance organisation's humanitarian efforts.
+              </p>
+            </div>
             <CustomButton
               classname='button-center mt-4'
               buttonText='Donate Now'
-              link='/'
+              link='https://www.ketto.org/fundraiser/oculus-for-a-cause?utm_source=external_ct&utm_medium=whatsapp&utm_Campaign=sm_campaigner_sac_w4'
               animation='zoom-in'
               gradient
             />
@@ -69,22 +78,30 @@ const Cause = () => {
           />
         </div>
         <div className='row px-5 py-3 text-bg align-self-center'>
-          <p className='text justify-para'>
-            We at SPIT believe that students cannot be called engineers with
-            just their degrees. What makes us engineers is a holistic
-            development of our perspectives and being equipped to solve
-            problems, not just on circuits or computers, but also in the world
-            around us. Oculus 2021 is proud to be associated with Goonj, an
-            esteemed NGO, which aims to build an equitable relationship of
-            strength, sustenance and dignity between the cities and villages
-            using the under-utilized urban material as a tool to triggger
-            development with dignity, across the country.
-          </p>
+          <div className='text justify-para cause'>
+            <p>
+              Oculus 2021 will be supporting efforts of Goonj, an esteemed NGO,
+              which aims to lessen the bridge between the rural and urban areas.
+            </p>
+            <p>
+              Taking the collective responsibility for the betterment of the
+              society, the students of SPIT will be organising a drive for
+              contributing clothes and other essential supplies in order to
+              support the needs of the people in disaster hit areas under the
+              campaign called Rahat. The fest also aims to raise funds for
+              disaster relief and rehabilitation programmes undertaken by Goonj
+              in various parts of the country.
+            </p>
+            <p>
+              Oculus 2021 will support this cause and work hand in hand to
+              enhance organisation's humanitarian efforts.
+            </p>
+          </div>
         </div>
         <CustomButton
           classname='button-center mt-2'
           buttonText='Donate Now'
-          link='/'
+          link='https://www.ketto.org/fundraiser/oculus-for-a-cause?utm_source=external_ct&utm_medium=whatsapp&utm_Campaign=sm_campaigner_sac_w4'
           gradient
         />
       </div>
