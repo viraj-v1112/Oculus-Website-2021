@@ -6,15 +6,15 @@ import LandingSection from '../components/LandingSection/LandingSection';
 import Theme from '../components/Theme/Theme';
 
 const Landing = () => {
-  return (
-    <Fragment>
-      <LandingSection />
-      <Theme />
-      <Cause />
-      <AppDownload />
-      <Event />
-    </Fragment>
-  );
+	return (
+		<Fragment>
+			<LandingSection />
+			<Theme />
+			<Cause />
+			<AppDownload />
+			<Event />
+		</Fragment>
+	);
 };
 
 export default Landing;

@@ -15,39 +15,24 @@ import Loading from './shared/Loading';
 AOS.init();
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  } else {
-    return (
-      <AuthState>
-        <EventState>
-          <Router>
-            <Fragment>
-              <CustomNavbar>
-                <Switch>
-                  <Route exact path='/' component={Landing} />
-                  <Route exact path='/events' component={Events} />
-                  <Route exact path='/sponsors' component={Sponsor} />
-                </Switch>
-                <Footer />
-              </CustomNavbar>
-            </Fragment>
-          </Router>
-        </EventState>
-      </AuthState>
-    );
-  }
-  // }
+	return (
+		<AuthState>
+			<EventState>
+				<Router>
+					<Fragment>
+						<CustomNavbar>
+							<Switch>
+								<Route exact path='/' component={Landing} />
+								<Route exact path='/events' component={Events} />
+								<Route exact path='/sponsors' component={Sponsor} />
+							</Switch>
+							<Footer />
+						</CustomNavbar>
+					</Fragment>
+				</Router>
+			</EventState>
+		</AuthState>
+	);
 };
 
 export default App;
