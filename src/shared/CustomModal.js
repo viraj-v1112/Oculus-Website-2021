@@ -132,7 +132,7 @@ const CustomModal = ({ open, onClose, oevent }) => {
 								<img src={O} alt='o' className='o' />
 							</div>
 							<div className='d-flex align-items-center'>
-								<h4 className='my-4 text-dark'>Enter Your Details..</h4>
+								<h4 className='my-4 font-class text-dark'>Enter Your Details..</h4>
 							</div>
 						</div>
 					</div>

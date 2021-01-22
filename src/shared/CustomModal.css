@@ -11,3 +11,12 @@
 .cust {
 	border-bottom: 1px solid #a3a3a3;
 }
+
+@media only screen and (max-width: 380px) {
+	.font-class {
+		font-size: calc(110%);
+	}
+	.o {
+		width: calc(45%);
+	}
+}

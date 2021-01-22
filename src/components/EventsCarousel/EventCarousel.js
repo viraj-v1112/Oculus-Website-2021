@@ -50,6 +50,18 @@ const EventCarousel = ({ autoplay, historyPush, setCategory, CATEGORY }) => {
 					centerMode: true,
 					centerPadding: '90px'
 				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					infinite: true,
+					dots: false,
+					centerMode: true,
+					centerPadding: '60px'
+				}
 			}
 		]
 	};
