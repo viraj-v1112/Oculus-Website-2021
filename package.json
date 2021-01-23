@@ -19,6 +19,8 @@
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "^4.0.1",
 		"react-scroll": "^1.8.1",
+		"react-scroll-to-top": "^1.0.5",
+		"react-scroll-up-button": "^1.6.4",
 		"react-slick": "^0.27.13",
 		"react-toast-notifications": "^2.4.0",
 		"styled-components": "^5.2.1",

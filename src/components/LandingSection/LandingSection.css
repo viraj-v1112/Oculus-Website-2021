@@ -1,64 +1,63 @@
 .landing-back {
-  background-color: white;
-  background-image: url('../../assets/Gif/Transparency.png'),
-    url('../../assets/Gif/Back.gif');
-  background-repeat: no-repeat;
-  background-position: bottom left, center;
-  background-size: 100%, cover;
-  height: 100vh;
-  border-radius: 0 1rem 0 0;
+	background-color: white;
+	background-image: url('../../assets/Gif/Transparency.png'), url('../../assets/Gif/Back.gif');
+	background-repeat: no-repeat;
+	background-position: bottom left, center;
+	background-size: 100%, cover;
+	height: 100vh;
+	border-radius: 0 1rem 0 0;
 }
 
 .gif-class {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 .oculus {
-  position: relative;
-  top: 40%;
-  display: block;
-  margin: auto;
-  height: 11rem;
-  width: auto;
-  max-width: 50%;
+	position: relative;
+	top: 40%;
+	display: block;
+	margin: auto;
+	height: 11rem;
+	width: auto;
+	max-width: 50%;
 }
 
 .transparent {
-  position: absolute;
-  bottom: 0%;
-  display: block;
-  width: 100%;
+	position: absolute;
+	bottom: 0%;
+	display: block;
+	width: 100%;
 }
 .oculus-date {
-  position: relative;
-  top: 40%;
-  left: 1%;
-  display: block;
-  margin: auto;
-  height: 7rem;
-  width: auto;
-  max-width: 32%;
+	position: relative;
+	top: 40%;
+	left: 1%;
+	display: block;
+	margin: auto;
+	height: 5.2rem;
+	width: auto;
+	max-width: 27%;
 }
 
 @media only screen and (max-width: 767px) {
-  .oculus {
-    position: relative;
-    top: 50%;
-    display: block;
-    margin: auto;
-    height: 13.5%;
-    width: auto;
-    max-width: 90%;
-  }
+	.oculus {
+		position: relative;
+		top: 50%;
+		display: block;
+		margin: auto;
+		height: 13.5%;
+		width: auto;
+		max-width: 90%;
+	}
 
-  .oculus-date {
-    position: relative;
-    top: 50%;
-    display: block;
-    margin: auto;
-    height: 11%;
-    width: auto;
-    max-width: 80%;
-  }
+	.oculus-date {
+		position: relative;
+		top: 50%;
+		display: block;
+		margin: auto;
+		height: 6%;
+		width: auto;
+		max-width: 55%;
+	}
 }
