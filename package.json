@@ -17,6 +17,7 @@
 		"react-lottie": "^1.2.3",
 		"react-material-ui-form-validator": "^2.1.1",
 		"react-router-dom": "^5.2.0",
+		"react-router-scroll-to-top": "^1.1.1",
 		"react-scripts": "^4.0.1",
 		"react-scroll": "^1.8.1",
 		"react-scroll-to-top": "^1.0.5",
