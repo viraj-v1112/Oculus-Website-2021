@@ -68,6 +68,7 @@ a:focus {
 .category img {
   width: 100%;
   display: block;
+  cursor: pointer;
 }
 
 .active-category {
@@ -79,4 +80,5 @@ a:focus {
   display: block;
   margin: -50px auto 0;
   opacity: 1;
+  cursor: pointer;
 }

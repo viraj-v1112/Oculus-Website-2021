@@ -66,6 +66,7 @@ li.slick-active {
   margin: 1rem;
   width: 50%;
   display: inline-block !important;
+  cursor: pointer;
 }
 .slick-slide {
   opacity: 0.5;

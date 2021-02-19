@@ -17,7 +17,7 @@ export const Category_List = [
   },
   {
     id: 3,
-    category: 'Pronite',
+    category: 'Pronites',
     imagePath: Pronite,
   },
   {

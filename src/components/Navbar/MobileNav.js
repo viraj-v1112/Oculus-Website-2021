@@ -26,7 +26,7 @@ const Phone = styled.div`
 	);
 `;
 
-const openStyles = css`transform: translateX(-150px) scale(0.97);`;
+const openStyles = css`transform: translateX(-170px) translateY(30px);`;
 
 const Content = styled.div`
 	border-radius: 1rem

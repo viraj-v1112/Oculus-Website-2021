@@ -1,5 +1,10 @@
 import { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import Landing from './layout/Landing';
 import Events from './layout/Events';
 import CustomNavbar from './components/Navbar/CustomNavbar';
@@ -25,6 +30,7 @@ const App = () => {
                 <Route exact path='/' component={Landing} />
                 <Route exact path='/events' component={Events} />
                 <Route exact path='/sponsors' component={Sponsor} />
+                <Redirect to='/' />
               </Switch>
               <Footer />
             </CustomNavbar>

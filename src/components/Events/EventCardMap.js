@@ -31,6 +31,9 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
   }));
 
   useEffect(() => {
+    events.sort((a, b) => {
+      return b.order - a.order;
+    });
     setEventList(events);
     if (category !== '') {
       const array = events.filter((event) => event.category === category);
@@ -47,30 +50,35 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
         height={300}
         width={300}
         style={{ position: 'relative', top: '25%' }}
+        isPaused
+        isStopped
       />
     );
   } else
     return (
-      <div className='row mt-4 text-center'>
-        {eventList.map((eventdet, index) => (
-          <div
-            key={index}
-            className={`col-lg-4 col-md-6 col-sm-12 col-12`}
-            // style={{ float: 'none', margin: '0 auto' }}
-          >
-            <EventCard
-              key={index}
-              event={eventdet}
-              handleOpen={() => {
-                setOpen(true);
-                setOevent(eventdet.eventName);
-              }}
-              ref={activeRef}
-              //   setActive={() => setActive(!active)}
-              //   active={active}
-            />
-          </div>
-        ))}
+      <div className='row mt-5 text-center'>
+        {eventList
+          .filter((event) => {
+            if (
+              event.show !== false &&
+              event.category !== 'Pronites1' &&
+              event.category !== 'Pronites'
+            )
+              return event;
+          })
+          .map((eventdet, index) => (
+            <div key={index} className={`col-lg-4 col-md-6 col-sm-12 col-12`}>
+              <EventCard
+                key={index}
+                event={eventdet}
+                handleOpen={() => {
+                  setOpen(true);
+                  setOevent(eventdet.eventName);
+                }}
+                ref={activeRef}
+              />
+            </div>
+          ))}
         <CustomModal
           open={open}
           onClose={() => setOpen(false)}

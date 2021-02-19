@@ -20,6 +20,7 @@
   color: #0a4870;
   transition: 0.3s;
   line-height: 1 !important;
+  cursor: pointer;
 }
 .booking-card::before {
   content: '';
@@ -71,6 +72,8 @@
   transition: 0.3s;
 }
 .booking-card .informations-container .title {
+  color: inherit;
+  font-family: inherit;
   position: relative;
   padding-bottom: 10px;
   margin-bottom: 10px;

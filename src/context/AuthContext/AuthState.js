@@ -101,8 +101,8 @@ const AuthState = ({ children }) => {
           email: `${user.email}`,
           event: `${event}`,
         };
-
-        fetch('https://oculus-email.herokuapp.com/sendemail', {
+        // https://oculus-email.herokuapp.com/sendemail
+        fetch('https://oculus.spit.ac.in/sendemail', {
           body: JSON.stringify(emaildata),
           cache: 'no-cache',
           credentials: 'same-origin',
@@ -186,7 +186,7 @@ const AuthState = ({ children }) => {
                 event: `${event}`,
               };
 
-              fetch('https://oculus-email.herokuapp.com/sendemail', {
+              fetch('https://oculus.spit.ac.in/sendemail', {
                 body: JSON.stringify(emaildata),
                 cache: 'no-cache',
                 credentials: 'same-origin',

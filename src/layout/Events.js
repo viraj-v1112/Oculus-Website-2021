@@ -6,6 +6,7 @@ import { Category_List } from '../components/EventsCarousel/EventList';
 import EventContext from '../context/EventContext/EventContext';
 import EventCardMap from '../components/Events/EventCardMap';
 import EventCarousel from '../components/EventsCarousel/EventCarousel';
+import ProniteMap from '../components/Pronites/ProniteMap';
 
 const Events = () => {
   const location = useLocation();
@@ -38,12 +39,10 @@ const Events = () => {
                 if (category === obj.category) {
                   setCategory('');
                 } else setCategory(obj.category);
-                // setActive(false);
-
                 activeRef.current?.SET_ACTIVE();
               }}
             >
-              <div className=' category' key={index}>
+              <div className='category' key={index}>
                 <img src={obj.imagePath} alt={obj.category} />
               </div>
             </div>
@@ -60,13 +59,16 @@ const Events = () => {
             dots={false}
           />
         </div>
-
-        <EventCardMap
-          category={category}
-          events={events}
-          loading={loading}
-          ref={activeRef}
-        />
+        {category === 'Pronites' ? (
+          <ProniteMap eventList={events} loading={loading} />
+        ) : (
+          <EventCardMap
+            category={category}
+            events={events}
+            loading={loading}
+            ref={activeRef}
+          />
+        )}
       </div>
     </div>
   );

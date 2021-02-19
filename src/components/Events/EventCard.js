@@ -13,13 +13,15 @@ const EventCard = forwardRef(({ event, handleOpen }, ref) => {
     },
   }));
   const {
-    description,
+    link,
+    shortDescription,
     category,
     eventName,
     imageURL,
     prizes,
     teamSizeAndFees,
     date,
+    sectionId,
   } = event;
   const { user, userData, Update, SignIn } = useContext(AuthContext);
 
@@ -44,22 +46,29 @@ const EventCard = forwardRef(({ event, handleOpen }, ref) => {
   };
 
   return (
-    <div
+    <section
       className={`booking-card ${active ? 'ACTIVE' : ''}`}
       style={{
         backgroundImage: `url(${imageURL})`,
       }}
       onClick={() => setActive(!active)}
+      id={sectionId}
     >
       <div className='book-container'>
         <div className='content'>
-          <button
-            className='btn'
-            disabled={isShownInterest()}
-            onClick={handleClick}
-          >
-            {isShownInterest() ? 'Request Recieved' : 'Register'}
-          </button>
+          {link ? (
+            <a href={link} target='_blank' rel='noreferrer'>
+              <button className='btn'>Register</button>
+            </a>
+          ) : (
+            <button
+              className='btn'
+              disabled={isShownInterest()}
+              onClick={handleClick}
+            >
+              {isShownInterest() ? 'Request Recieved' : 'Register'}
+            </button>
+          )}
         </div>
       </div>
       <div className='informations-container'>
@@ -77,14 +86,14 @@ const EventCard = forwardRef(({ event, handleOpen }, ref) => {
           <span>{category}</span>
 
           <span>
-            <i class='fa fa-calendar-o' aria-hidden='true'></i> {date}
+            <i className='fa fa-calendar-o' aria-hidden='true' /> {date}
           </span>
         </div>
 
         <div className='more-information'>
           <div className='info-and-date-container'>
             <div className='box info'>
-              <p>Prizes</p>
+              <p>Prizes Worth</p>
               <p style={{ fontSize: '0.85rem' }}>₹ {prizes}</p>
             </div>
             <div className='box'>
@@ -107,10 +116,10 @@ const EventCard = forwardRef(({ event, handleOpen }, ref) => {
               </div>
             </div>
           </div>
-          <p className='disclaimer justify-para'>{description}</p>
+          <p className='disclaimer justify-para'>{shortDescription}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 });
 
