@@ -1,10 +1,10 @@
 // eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
-    case 'SET_EVENTS':
+    case 'SET_SPONSORS':
       return {
         ...state,
-        events: action.payload,
+        sponsors: action.payload,
         loading: false,
       };
     default:

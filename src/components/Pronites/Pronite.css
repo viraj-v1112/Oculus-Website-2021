@@ -25,14 +25,10 @@
   height: 100%;
   box-shadow: 0 0rem 2rem rgba(0, 0, 0, 0);
   transition: box-shadow 400ms 400ms linear;
-  /* opacity: 0.25; */
 }
 .card__slide .image {
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 60%;
-  height: 100%;
+  width: 45%;
+  height: 80%;
   position: absolute;
   top: 50%;
   left: 25%;
@@ -41,7 +37,6 @@
   opacity: 1;
 }
 .card__slide:after {
-  /*card background class*/
   content: '';
   position: absolute;
   top: 0;
@@ -101,7 +96,7 @@
 }
 .Content {
   position: absolute;
-  left: 40%;
+  left: 45%;
   top: 50%;
   transform: translatey(-50%);
   width: 44%;
@@ -140,7 +135,7 @@
   position: relative;
 }
 .title__line:before {
-  background: linear-gradient(90deg, #7b29ff, #304ffe);
+  background: linear-gradient(90deg, #fbff29, #feaf30);
   transform-origin: 100% 50%;
   transition: transform 500ms ease-out;
   transform: scaleX(0);
@@ -148,8 +143,8 @@
   display: block;
   position: absolute;
   width: calc(100%);
-  top: 1rem;
-  height: 1rem;
+  top: 1.2rem;
+  height: 0.7rem;
   z-index: -1;
 }
 
@@ -161,7 +156,7 @@
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  margin: 0 0 3.6rem;
+  margin: 0 0 3rem;
   color: #fff;
 }
 .button {
@@ -178,8 +173,8 @@
   position: relative;
   z-index: 2;
   color: #fff;
-  border-top: 0.15rem solid #304ffe;
-  border-bottom: 0.15rem solid #7b29ff;
+  border-top: 0.15rem solid #fbff29;
+  border-bottom: 0.15rem solid #feaf30;
   box-shadow: 0 1rem 2rem rgba(123, 41, 255, 0.2);
   transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -191,7 +186,7 @@
   top: -1%;
   height: 102%;
   width: 0.15rem;
-  background: linear-gradient(#304ffe, #7b29ff);
+  background: linear-gradient(#fbff29, #feaf30);
 }
 .button:before {
   left: 0;
@@ -253,6 +248,7 @@
 @media (max-width: 768px) {
   .pronite {
     margin-top: 30%;
+    height: 45rem;
   }
   .laptop-pronite {
     display: none;
@@ -276,7 +272,6 @@
 
   .desc-1 {
     font-size: 0.85rem;
-    /* line-height: 1; */
   }
 
   .title__line::before {

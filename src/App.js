@@ -13,6 +13,7 @@ import Sponsor from './layout/Sponsor';
 import AOS from 'aos';
 import EventState from './context/EventContext/EventState';
 import AuthState from './context/AuthContext/AuthState';
+import SponsorState from './context/SponsorContext/SponsorState';
 
 import './App.css';
 import 'aos/dist/aos.css';
@@ -23,19 +24,22 @@ const App = () => {
   return (
     <AuthState>
       <EventState>
-        <Router>
-          <Fragment>
-            <CustomNavbar>
-              <Switch>
-                <Route exact path='/' component={Landing} />
-                <Route exact path='/events' component={Events} />
-                <Route exact path='/sponsors' component={Sponsor} />
-                <Redirect to='/' />
-              </Switch>
-              <Footer />
-            </CustomNavbar>
-          </Fragment>
-        </Router>
+        <SponsorState>
+          <Router>
+            <Fragment>
+              <CustomNavbar>
+                <Switch>
+                  <Route exact path='/' component={Landing} />
+                  <Route exact path='/events' component={Events} />
+                  <Route exact path='/sponsors' component={Sponsor} />
+                  <Route exact path='/events/:category' component={Events} />
+                  <Redirect to='/' />
+                </Switch>
+                <Footer />
+              </CustomNavbar>
+            </Fragment>
+          </Router>
+        </SponsorState>
       </EventState>
     </AuthState>
   );

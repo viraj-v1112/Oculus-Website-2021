@@ -28,7 +28,7 @@ const CustomNavbar = (props) => {
             <ul className='navbar-nav ml-auto'>
               <li className='nav-item '>
                 <p className='nav-link'>
-                  <NavLink exact to='/events' activeClassName='active-link'>
+                  <NavLink to='/events' activeClassName='active-link'>
                     Events
                   </NavLink>
                 </p>

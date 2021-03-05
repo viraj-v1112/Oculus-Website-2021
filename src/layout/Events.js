@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext, useRef } from 'react';
+import React, { useEffect, useContext } from 'react';
 import EventLogo from '../assets/LandingSections/EventsLogo.png';
-import { useLocation } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
 import { Category_List } from '../components/EventsCarousel/EventList';
 import EventContext from '../context/EventContext/EventContext';
@@ -9,16 +9,14 @@ import EventCarousel from '../components/EventsCarousel/EventCarousel';
 import ProniteMap from '../components/Pronites/ProniteMap';
 
 const Events = () => {
-  const location = useLocation();
+  const { category } = useParams();
+  const history = useHistory();
   const { events, getEvents, loading } = useContext(EventContext);
   useEffect(() => {
     scroll.scrollToTop();
     getEvents();
     // eslint-disable-next-line
   }, []);
-
-  const [category, setCategory] = useState(location.state?.category || '');
-  const activeRef = useRef();
 
   return (
     <div className='back-app py-5' style={{ borderRadius: '0 1rem 0 0' }}>
@@ -37,9 +35,8 @@ const Events = () => {
               }`}
               onClick={() => {
                 if (category === obj.category) {
-                  setCategory('');
-                } else setCategory(obj.category);
-                activeRef.current?.SET_ACTIVE();
+                  history.push('/events');
+                } else history.push('/events/' + obj.category);
               }}
             >
               <div className='category' key={index}>
@@ -54,20 +51,19 @@ const Events = () => {
           <EventCarousel
             autoplay={false}
             historyPush={false}
-            setCategory={setCategory}
             CATEGORY={category}
             dots={false}
           />
         </div>
         {category === 'Pronites' ? (
-          <ProniteMap eventList={events} loading={loading} />
-        ) : (
-          <EventCardMap
-            category={category}
-            events={events}
+          <ProniteMap
+            eventList={events.filter((event) => {
+              if (event.category === 'Pronites') return event;
+            })}
             loading={loading}
-            ref={activeRef}
           />
+        ) : (
+          <EventCardMap category={category} events={events} loading={loading} />
         )}
       </div>
     </div>

@@ -6,13 +6,14 @@ import { db } from '../../config';
 const EventState = (props) => {
   const initialState = {
     events: [],
+    sponsors: {},
     loading: true,
   };
 
   const [state, dispatch] = useReducer(EventReducer, initialState);
 
   const getEvents = async () => {
-    const eve = [];
+    let eve = [];
     dispatch({ type: 'SET_LOADING' });
     await db
       .collection('Events')
@@ -26,6 +27,9 @@ const EventState = (props) => {
           });
           event.teamSizeAndFees = teamsize;
           eve.push(event);
+        });
+        eve.sort((a, b) => {
+          return b.order - a.order;
         });
       });
     dispatch({

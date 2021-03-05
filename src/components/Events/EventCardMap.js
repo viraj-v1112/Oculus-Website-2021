@@ -1,17 +1,11 @@
-import React, {
-  useEffect,
-  useState,
-  forwardRef,
-  useImperativeHandle,
-  useRef,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import EventCard from './EventCard';
 import CustomModal from '../../shared/CustomModal';
 import Loading from '../../shared/Loading';
 import Lottie from 'react-lottie';
 import animationData from '../../assets/lottie/coming-soon.json';
 
-const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
+const EventCardMap = ({ category, events, loading }) => {
   const [eventList, setEventList] = useState(events);
   const [open, setOpen] = useState(false);
   const [oevent, setOevent] = useState('');
@@ -23,24 +17,14 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
-  const activeRef = useRef();
-  useImperativeHandle(ref, () => ({
-    SET_ACTIVE() {
-      activeRef.current?.SET_ACTIVE();
-    },
-  }));
-
   useEffect(() => {
-    events.sort((a, b) => {
-      return b.order - a.order;
-    });
     setEventList(events);
-    if (category !== '') {
+    if (category) {
       const array = events.filter((event) => event.category === category);
       setEventList(array);
     }
     // eslint-disable-next-line
-  }, [category, events]);
+  }, [events, category]);
   if (loading) {
     return <Loading />;
   } else if (eventList.length === 0) {
@@ -59,11 +43,7 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
       <div className='row mt-5 text-center'>
         {eventList
           .filter((event) => {
-            if (
-              event.show !== false &&
-              event.category !== 'Pronites1' &&
-              event.category !== 'Pronites'
-            )
+            if (event.show !== false && event.category !== 'Pronites')
               return event;
           })
           .map((eventdet, index) => (
@@ -75,7 +55,6 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
                   setOpen(true);
                   setOevent(eventdet.eventName);
                 }}
-                ref={activeRef}
               />
             </div>
           ))}
@@ -86,6 +65,6 @@ const EventCardMap = forwardRef(({ category, events, loading }, ref) => {
         />
       </div>
     );
-});
+};
 
 export default EventCardMap;

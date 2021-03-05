@@ -4,7 +4,7 @@ import EventCarouselCard from './EventCarouselCard';
 import { Category_List } from './EventList';
 import './Events.css';
 
-const EventCarousel = ({ autoplay, historyPush, setCategory, CATEGORY }) => {
+const EventCarousel = ({ autoplay, historyPush, CATEGORY }) => {
   const settings = {
     className: 'center',
     infinite: true,
@@ -74,7 +74,6 @@ const EventCarousel = ({ autoplay, historyPush, setCategory, CATEGORY }) => {
           category={category.category}
           key={category.id}
           historyPush={historyPush}
-          setCategory={setCategory}
           CATEGORY={CATEGORY}
         />
       ))}

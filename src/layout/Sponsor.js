@@ -1,38 +1,71 @@
-import React, { useEffect } from 'react';
-import Lottie from 'react-lottie';
-import animationData from '../assets/lottie/coming-soon.json';
-import Sponsors from '../assets/OurSponsors.png';
+import React, { useEffect, useContext } from 'react';
+import SponsorsLogo from '../assets/OurSponsors.png';
+import SponsorContext from '../context/SponsorContext/SponsorContext';
 import { animateScroll as scroll } from 'react-scroll';
+import '../App.css';
+import Loading from '../shared/Loading';
 
 const Sponsor = () => {
-	const defaultOptions = {
-		loop: true,
-		autoplay: true,
-		animationData: animationData,
-		rendererSettings: {
-			preserveAspectRatio: 'xMidYMid slice'
-		}
-	};
+  const { getSponsors, sponsors, loading } = useContext(SponsorContext);
 
-	useEffect(() => {
-		scroll.scrollToTop();
-	}, []);
+  useEffect(() => {
+    getSponsors();
+    scroll.scrollToTop();
+    // eslint-disable-next-line
+  }, []);
 
-	return (
-		<div className='back-app' style={{ height: '100vh', borderRadius: '0 1rem 0 0' }}>
-			<div className='container-flex py-5 mx-5'>
-				<div className='row py-0'>
-					<img src={Sponsors} alt='Our Sponsors' className='event-logo-big' />
-				</div>
-				<Lottie
-					options={defaultOptions}
-					height={300}
-					width={300}
-					style={{ position: 'relative', top: '25%' }}
-				/>
-			</div>
-		</div>
-	);
+  if (sponsors.length === 0) {
+    return <Loading />;
+  }
+  return (
+    <div className='back-app' style={{ borderRadius: '0 1rem 0 0' }}>
+      <div className='container-flex py-5 mx-5'>
+        <div className='row py-0'>
+          <img
+            src={SponsorsLogo}
+            alt='Our Sponsors'
+            className='event-logo-big'
+          />
+        </div>
+        <div>
+          <div className='row justify-content-center my-5'>
+            <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
+              <a href={sponsors[0].link} target='_blank' rel='noreferrer'>
+                <img
+                  style={{ width: '100%' }}
+                  src={sponsors[0].imageURL}
+                  alt={sponsors[0].name}
+                />
+              </a>
+              <h2 className='mb-4 text-center mt-4'>Co-Title Sponsor</h2>
+            </div>
+          </div>
+          <div className='row'>
+            {sponsors
+              .filter((sponsor) => {
+                if (
+                  sponsor.imageURL !== '' &&
+                  sponsor.title !== 'Co-Title Sponsor' &&
+                  sponsor.order >= 0
+                )
+                  return sponsor;
+              })
+              .map((sponsor) => (
+                <div className='col-lg-6 col-md-6 col-sm-12 col-12 align-bottom my-5 '>
+                  <a href={sponsor.link} target='_blank' rel='noreferrer'>
+                    <img
+                      className='sponsor-image'
+                      src={sponsor.imageURL}
+                      alt={sponsor.name}
+                    />
+                  </a>
+                  <h5 className='text-center mt-5'>{sponsor.title}</h5>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-
 export default Sponsor;

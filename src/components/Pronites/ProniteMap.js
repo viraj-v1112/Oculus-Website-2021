@@ -1,7 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
+import CustomModal from '../../shared/CustomModal';
+
 import Pronite from './Pronite';
 
 const ProniteMap = ({ eventList }) => {
+  const [open, setOpen] = useState(false);
+  const [oevent, setOevent] = useState('');
+
   return (
     <Fragment>
       {eventList
@@ -11,9 +16,19 @@ const ProniteMap = ({ eventList }) => {
         })
         .map((eventdet, index) => (
           <div key={index}>
-            <Pronite key={index} event={eventdet} index={index} />
+            <Pronite
+              key={index}
+              event={eventdet}
+              index={index}
+              handleOpen={() => {
+                console.log('object1');
+                setOpen(true);
+                setOevent(eventdet.eventName);
+              }}
+            />
           </div>
         ))}
+      <CustomModal open={open} onClose={() => setOpen(false)} oevent={oevent} />
     </Fragment>
   );
 };
