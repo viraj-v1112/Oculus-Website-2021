@@ -4,12 +4,15 @@ import SponsorContext from '../context/SponsorContext/SponsorContext';
 import { animateScroll as scroll } from 'react-scroll';
 import '../App.css';
 import Loading from '../shared/Loading';
+import VotesContext from '../context/VotesContext/VotesContext';
 
 const Sponsor = () => {
   const { getSponsors, sponsors, loading } = useContext(SponsorContext);
+  const { getVotes } = useContext(VotesContext);
 
   useEffect(() => {
     getSponsors();
+    getVotes();
     scroll.scrollToTop();
     // eslint-disable-next-line
   }, []);

@@ -60,7 +60,7 @@ const EventCard = ({ event, handleOpen }) => {
               disabled={isShownInterest()}
               onClick={handleClick}
             >
-              {isShownInterest() ? 'Request Recieved' : 'Register'}
+              {isShownInterest() ? 'Request Received' : 'Register'}
             </button>
           )}
         </div>
